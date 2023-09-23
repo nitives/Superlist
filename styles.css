@@ -27,7 +27,12 @@ header p {
     color: #fff;
 }
 
-
+discord-embed {
+    position: relative; /* or absolute or fixed */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1; /* Adjust as needed */
+}
 
 button#dark-mode-toggle {
     background-color: transparent;
@@ -69,7 +74,7 @@ a { /* Links */
 }
 
 p { /* Descriptions */
-    color: #000;
+    color: #242424;
     font-weight: 600;
 }
 
