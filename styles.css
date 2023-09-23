@@ -23,6 +23,8 @@ header {
 
 /* Adjust the width to your desired size */
 img {
+    align-items: center;
+    justify-content: center;
     width: 700px; /* Change this value as needed */
     height: auto; /* This maintains the aspect ratio */
 }
