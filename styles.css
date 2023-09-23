@@ -27,6 +27,15 @@ header p {
     color: #fff;
 }
 
+/* Apply styles to the <hr>/the divider element */
+hr {
+    border-color: #d1d1d1; /* Color of the line */
+    border-width: 1px;  /* Width of the line */
+    border-style: solid; /* Style of the line (e.g., solid, dashed, etc.) */
+    margin: 15px 0;     /* Adjust the margin as needed for spacing */
+}
+
+
 discord-embed {
     position: relative; /* or absolute or fixed */
     top: 10px; /* Adjust as needed */
@@ -103,4 +112,8 @@ footer {
 .dark-mode section {
     color: #eeeeee;
     background-color: #0d0d0d;
+}
+
+.dark-mode hr {
+    border-color: #1a1a1a; /* Color of the line */
 }
