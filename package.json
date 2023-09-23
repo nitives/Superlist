@@ -1,0 +1,17 @@
+{
+  "name": "airreps",
+  "version": "1.0.0",
+  "description": "The AirReps Repository containing the Ultimate Guide and other resources!",
+  "repository": "https://github.com/TowyTowy/airreps.git",
+  "author": "AirReps",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "audit": "npx eslint ."
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-beta.6"
+  }
+}
