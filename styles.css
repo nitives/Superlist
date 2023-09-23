@@ -9,15 +9,22 @@ body {
     font-family: Inter, sans-serif;
 }
 
+/* Header styles with logo */
 header {
     display: flex;
     flex-direction: column;
-    background-color: #0d0d0d;
+    background: linear-gradient(to bottom, #0d0d0d, #050505);
     color: #fff;
     text-align: center;
-    margin: 0px;
-    padding: 15px ;
-    border-radius: 0px;
+    margin: 0;
+    padding: 15px;
+    border-radius: 0;
+}
+
+/* Adjust the width to your desired size */
+img {
+    width: 700px; /* Change this value as needed */
+    height: auto; /* This maintains the aspect ratio */
 }
 
 header h1 {
@@ -26,6 +33,11 @@ header h1 {
 }
 
 header p {
+    position: relative;
+    font-size: 23px;
+    bottom: 30px;
+    left: 10px;
+    margin-bottom: -20px;
     color:  #fff;
 }
 
