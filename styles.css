@@ -5,6 +5,7 @@ body, h1, h2, ul {
 }
 
 body {
+    background-color: #fff;
     font-family: Inter, sans-serif;
 }
 
@@ -20,11 +21,12 @@ header {
 }
 
 header h1 {
+    color:  #fff;
     font-size: 48px;
 }
 
 header p {
-    color: #fff;
+    color:  #fff;
 }
 
 /* Apply styles to the <hr>/the divider element */
@@ -54,13 +56,13 @@ button#dark-mode-toggle {
 main {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 section {
     background-color: #f0f0f0;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 h2 {
