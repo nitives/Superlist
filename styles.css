@@ -13,7 +13,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #0d0d0d, #050505);
+    background: #0d0d0d;
     color: #fff;
     text-align: center;
     margin: 0;
@@ -103,10 +103,12 @@ p { /* Descriptions */
 
 footer {
     background-color: #0d0d0d;
-    color: #fff;
+    color: #3a3a3a;
     text-align: center;
     padding: 10px 0;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------- */
 
 /* Dark Mode */
 .dark-mode {
@@ -114,8 +116,16 @@ footer {
     color: #fff;
 }
 
+.dark-mode header {
+        background: linear-gradient(#0d0d0d, #050505);
+    }
+
 .dark-mode a {
     color: #5d18c4;
+}
+
+.dark-mode header p {
+    color: #fff;
 }
 
 .dark-mode p {
@@ -131,3 +141,40 @@ footer {
 .dark-mode hr {
     border-color: #1a1a1a; /* Color of the line */
 }
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Dark Scroll Bar */
+
+::-webkit-scrollbar,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+    background: var(--bg-color) !important;
+    width: 8px
+  }
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-button {
+    display: none !important;
+  }
+::-webkit-scrollbar-thumb,
+ ::-webkit-scrollbar-thumb {
+    background: #0d0d0d !important; /* Scroll Bar Color */
+    width: 8px !important;
+    border-radius: 10px;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:not(:active):hover,
+ ::-webkit-scrollbar-thumb:not(:active):hover {
+    background: #181818 !important;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:hover:active,
+ ::-webkit-scrollbar-thumb:active,
+ ::-webkit-scrollbar-thumb:hover:active {
+    background: #202020 !important;
+     transition: .1s !important;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------- */
