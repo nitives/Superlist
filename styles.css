@@ -9,6 +9,10 @@ body {
     font-family: Inter, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header styles with logo */
 header {
     display: flex;
@@ -39,7 +43,6 @@ header p {
     font-size: 23px;
     bottom: 30px;
     left: 10px;
-    margin-bottom: -20px;
     color:  #fff;
 }
 
@@ -70,18 +73,76 @@ button#dark-mode-toggle {
 main {
     max-width: 800px;
     margin: 20px auto;
-    padding: 15px;
+    padding: 5px;
 }
 
 section {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background: #f0f0f0;
     border-radius: 20px;
+    display: flex;
+    padding: 20px 20px 30px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
+
+/* -------------------------------------------------------------------------------------- */
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 1;
+    left: 0;
+    right: 0;
+    width: 183px;
+    height: 1028px;
+    padding-top: 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14.5px;
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+nav h2 { /* Nav Title Color */
+    color: #6d1fdf;
+    display: flex;
+    width: 163px;
+    height: 40px;
+    padding: 1px 0px 0px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.5px;
+    flex-shrink: 0;
+}
+
+nav a { /* Nav Links Colors */
+    color: #050505;
+}
+
+nav div {
+    color: #050505;
+    border-radius: 0px 10px 10px 0px;
+    background: #f0f0f0;
+    display: flex;
+    width: 183px;
+    height: auto;
+    padding: 5px 0px 5px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex-shrink: 0;
+    z-index: -1;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: -20px;
 }
 
 ul {
@@ -89,13 +150,14 @@ ul {
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 a { /* Links */
+    margin-bottom: 0px;
     font-weight: 600;
     text-decoration: none;
-    color: #5d18c4;
+    color: #6d1fdf;
 }
 
 p { /* Descriptions */
@@ -123,7 +185,7 @@ footer {
     }
 
 .dark-mode a {
-    color: #5d18c4;
+    color: #6d1fdf;
 }
 
 .dark-mode header p {
@@ -143,6 +205,17 @@ footer {
 .dark-mode hr {
     border-color: #1a1a1a; /* Color of the line */
 }
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.dark-mode nav div {
+    background: #0D0D0D;
+}
+
+.dark-mode nav a { /* Nav Links Colors */
+    color: #fff;
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
