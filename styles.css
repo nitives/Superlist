@@ -79,6 +79,8 @@ main {
 section {
     background: #f0f0f0;
     border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 10px #e6e6e6;
     display: flex;
     padding: 20px 20px 30px 20px;
     flex-direction: column;
@@ -200,6 +202,8 @@ footer {
 .dark-mode section {
     color: #eeeeee;
     background-color: #0d0d0d;
+    border: 1px solid #202020;
+    box-shadow: 0px 0px 0px #e6e6e6;
 }
 
 .dark-mode hr {
