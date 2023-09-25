@@ -186,10 +186,16 @@ p { /* Descriptions */
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    padding: 11px;
     background-color: #0d0d0d;
     color: #3a3a3a;
-    text-align: center;
-    padding: 10px 0;
+    gap: 100px;
+}
+
+footer a{
+    color: #3a3a3a;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
@@ -231,6 +237,11 @@ footer {
 
 .dark-mode hr {
     border-color: #1a1a1a; /* Color of the line */
+}
+
+.dark-mode footer a{
+    font-weight: 100;
+    color: #3a3a3a;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
