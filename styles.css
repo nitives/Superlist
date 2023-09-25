@@ -8,7 +8,7 @@
 --primary: #6c1fe0;
 --secondary: #f0f0f0;
 --accent: #6e4596;
---background-brightness: 75%;
+--background-brightness: 25%;
 }
 
 body, h1, h2, ul {
@@ -33,7 +33,7 @@ body {
     width: 100%;
     height: auto;
     
-    opacity: var(--background-brightness);
+    opacity: 0%;
     filter: blur(0px);
 }
 
@@ -59,7 +59,7 @@ header {
     justify-content: center;
     flex-direction: column;
     min-width: 700px;
-    background: #0d0d0d;
+    background: linear-gradient(to top, var(--background), #d4d4d4);
     color: #fff;
     text-align: center;
     margin: 0;
@@ -109,12 +109,17 @@ header p {
     font-size: 23px;
     bottom: 30px;
     left: 10px;
-    color:  #fff;
+    color:  var(--text);
+}
+
+header #hero-logo {
+    margin-top: 200px;
 }
 
 /* Apply styles to the <hr>/the divider element */
 hr {
     border-color: #d1d1d1; /* Color of the line */
+    border-radius: 15px;
     border-width: 1px;  /* Width of the line */
     border-style: solid; /* Style of the line (e.g., solid, dashed, etc.) */
     margin: 15px 0;     /* Adjust the margin as needed for spacing */
@@ -129,12 +134,21 @@ discord-embed {
 }
 
 button#dark-mode-toggle {
+    margin-top: -100px;
     background-color: transparent;
     border: none;
     color: #fff;
     cursor: pointer;
     outline: none;
 }
+
+#dark-icon {
+    filter: invert(0);
+    width: 24px;
+    height: auto;
+    transition: transform 0.3s ease; /* Add this line for a smooth transition */
+}
+
 
 main {
     max-width: 1200px;
@@ -153,6 +167,10 @@ section {
     box-shadow: 0px 0px 10px #e6e6e6;
     padding: 20px 20px 20px 20px;
     gap: 10px;
+}
+
+section i {
+    color: var(--text);
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -208,6 +226,12 @@ nav div {
     z-index: -1;
 }
 
+/* Hide the navigation on screens with a maximum width of 767px (typical for mobile devices) */
+@media screen and (max-width: 1843px) {
+    nav {
+      display: none;
+    }
+  }
 
 /* -------------------------------------------------------------------------------------- */
 
@@ -236,20 +260,39 @@ p { /* Descriptions */
     font-weight: 600;
 }
 
+/* --------------------------------------------- */
+
+b { 
+    display: flex;
+    position: relative;
+    opacity: 20%;
+    box-shadow: #eeeeee;
+    bottom: 11px;
+}
+
+.glow {
+    color: #fff;
+    filter: drop-shadow(0px 0px 10px #ffffff);
+  }
+
+/* --------------------------------------------- */
+
+
 footer {
     display: flex;
     justify-content: center;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #202020;
+    border: 1px solid #e6e6e6;
     margin: 20px;
-    background-color: rgba(13, 13, 13, 0.8);
+    background-color: var(--secondary);
     color: #3a3a3a;
     gap: 100px;
 }
 
 footer a{
-    color: #3a3a3a;
+    font-weight: 100;
+    color: #000000;
 }
 
 .emoji {
@@ -270,6 +313,26 @@ footer a{
 .dark-mode {
     background-color: #050505;
     color: #fff;
+}
+
+.dark-mode #dark-icon {
+    filter: invert(1);
+}
+
+.dark-mode #videoBG {
+    display: block;
+    height: auto;
+    outline: none; /* Remove the outline when the video is focused */
+    border: none; /* Remove any border */
+    background: transparent; /* Make sure the background is transparent */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity */
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    
+    opacity: var(--background-brightness);
+    filter: blur(0px);
 }
 
 .dark-mode header {
@@ -297,8 +360,25 @@ footer a{
     backdrop-filter: blur(25px);
 }
 
+.dark-mode section i {
+    color: var(--secondary)
+}
+
 .dark-mode hr {
-    border-color: #1a1a1a; /* Color of the line */
+    border-color: #202020; /* Color of the line */
+}
+
+.dark-mode footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    margin: 20px;
+    background-color: rgba(13, 13, 13, 0.8);
+    color: #3a3a3a;
+    gap: 100px;
+    background-color: rgba(13, 13, 13, 0.8);
 }
 
 .dark-mode footer a{
@@ -306,7 +386,10 @@ footer a{
     color: #3a3a3a;
 }
 
+
+
 /* ------------------------------------------------------------------------------------------------------------------- */
+
 
 .dark-mode nav h2 {
     color: #fff;
@@ -321,7 +404,9 @@ footer a{
 }
 
 .dark-mode nav a { /* Nav Links Colors */
-    color: #fff;
+    color: #e9e9e9;
+    letter-spacing: 0.px
+
 }
 
 

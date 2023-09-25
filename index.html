@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <link rel="icon" href="/assests/logo/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="/assests/logo/mini-logo-superlist.png">
+    <link rel="icon" href="/assets/logo/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="/assets/logo/mini-logo-superlist.png">
     <title>SuperList</title>
 </head>
 <body>
     <!-- BACKGROUND VIDEO -->
-    <video id="videoBG" poster="assests/background/poster.png" autoplay muted loop playsinline controls="false"style="pointer-events: none;">
-        <source src="assests/background/gradientbg.mp4" type="video/mp4">
+    <video id="videoBG" poster="assets/background/poster.png" autoplay muted loop playsinline controls="false"style="pointer-events: none;">
+        <source src="assets/background/gradientbg.mp4" type="video/mp4">
     </video>    
     <!---------------------->
     <header>
         <div class="hero">
             <div class="hero-logo">
-                <img src="/assests/logo/super-typeface-white.png" alt="SuperList Logo">
-                <p>The Ultimate List of the Internet</p>
+                <img
+                    draggable="false"
+                    src="/assets/logo/super-typeface-white.png"
+                    alt="SuperList Logo"
+                    id="light-logo"
+                />
+                <img
+                    draggable="false"
+                    src="/assets/logo/super-typeface-black.png"
+                    alt="SuperList Logo"
+                    id="dark-logo"
+                    hidden
+                />
+                <p>The Ultimate List of the Internet <img draggable="false" class="emoji" src="assets/icons/sparkles.webp"> </p>
                 <div class="hero-button">
                     <button id="dark-mode-toggle">
-                        <i id="dark-mode-icon" class="fas fa-sun"></i>
+                        <i id="#dark-icon">
+                            <img src="/assets/icons/icon-dark.svg" alt="Dark Mode Icon" id="dark-icon">
+                        </i>
                     </button>
-                </div>
+                </div>                
             </div>
         </div>
     </header>
@@ -49,84 +62,159 @@
     </div>
     <main>
         <section id="Pirate">
-            <h2>Pirate</h2> <!--Name-->
-            <p>Description</p> <!--Description-->
+            <h2> <img draggable="false" class="emoji" src="assets/icons/pirate-flag_1f3f4-200d-2620-fe0f.webp"> Pirate</h2> <!--Name-->
+            <p>Several sites and methods to pirate any software, shows, content, etc.</p>
+            <i><b class="glow"> Tip! If you want Adobe Creative Cloud or just a Adobe product you can crack it yourself, you can use a crack tool called “Adobe GenP”, I use specifically “Adobe GenP 3.1.9”</b></i>
+            <!--Description-->
             <ul id="links-list">
                 <li>
-                    <a href="https://4mirrorlink.com">4MirrorLink</a>
+                    <a href="https://www.reddit.com/r/GenP/" target="_blank"> <img draggable="false" class="emoji" src="assets/icons/reddit-logo.png"> GenP </a>
                 </li>
                 <br>
                 <li>
-                    <a href="http://www.4download.net">4Download</a>
+                    <a href="https://www.reddit.com/r/GenP/wiki/redditgenpguides/#wiki_.25BA_guide_.231_-_how_to_whitelist_files" target="_blank"> <img draggable="false" class="emoji" src="assets/icons/reddit-logo.png"> GenP - Full Guide for Windows</a>
+                </li>
+                <li>
+                    <h3>Software Sites</h3>
+                    <a href="https://4mirrorlink.com" target="_blank">4MirrorLink</a>
+                </li>
+                <br>
+                <li>
+                    <a href="http://www.4download.net" target="_blank">4DOWNLOAD</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://getintopc.com" target="_blank">Get Into PC</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://www.downloadpirate.com" target="_blank">Download Pirate</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://codec.kiev.ua/releases.html" target="_blank">Team V.R releases</a>
+                    - Huge collection of plugins for almost any software imaginable
+                </li>
+                <br>
+                <li>
+                    <a href="https://filecr.com/en/?id=231839764000" target="_blank">FileCR</a>
+                    - Best website for Adobe Products
+                </li>
+                <hr> <!--Divider-->
+                <li>
+                    <h3>Movies & Shows</h3>
+                    <a href="https://myflixerz.to" target="_blank">MyFlixer</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://movie-web.app/search/movie" target="_blank">Movie-Web</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://9animetv.to" target="_blank">9Anime</a>
                 </li>
             </ul>
         </section>
+
         <hr> <!--Divider-->
 
         <section id="Design & Art">
-            <h2>Design & Art</h2> <!--Name-->
-            <p>Description</p> <!--Description-->
+            <h2> <img draggable="false" class="emoji" src="assets/icons/artist-palette_1f3a8.webp"> Design & Art</h2> <!--Name-->
+            <p>Assets, Mockups, and Fonts for all diffrent types of graphic design projects and assets for video editing, videography, and photography. Additionally you can get pirated assets in the <a href="#Pirate">Pirate</a> section.</p> <!--Description-->
             <ul id="links-list">
                 <li>
                     <h3>Photography</h3>
-                    <a href="https://cameradecision.com">Camera Decision</a>
+                    <a href="https://cameradecision.com" target="_blank">Camera Decision</a>
                     - Help making a decision on what camera to purchase
                 </li>
                 <hr> <!--Divider-->
                 <li>
                     <h3>Videography</h3>
-                    <a href="https://eycndy.co/">EyeCandy</a>
+                    <a href="https://eycndy.co/" target="_blank">EyeCandy</a>
                     - Visual Technique Library
                 </li>
                 <hr> <!--Divider-->
                 <li>
                     <h3>LUTS & Colorings</h3>
                     <li>
-                        <a href="https://filecr.com/windows/photoshop-lightroom-0005/?id=090997390000">Adobe Lightroom 2023</a>
+                        <a href="https://filecr.com/windows/photoshop-lightroom-0005/?id=090997390000" target="_blank">Adobe Lightroom 2023</a>
                     - Preferred Photo Editor - Lightroom CC 6.4.0 (Latest 8/20/23)
                     </li>
                     <br>
                     <li>
-                        <a href="https://allpreset.com/">AllPreset</a>
+                        <a href="https://allpreset.com/" target="_blank">AllPreset</a>
                     - Free Presets - <b>Invite Only</b>
                     </li>
                     <br>
                     <li>
-                        <a href="https://frameset.app">FrameSet</a>
+                        <a href="https://frameset.app" target="_blank">FrameSet</a>
                     - Coloring References
                     </li>
                 <hr> <!--Divider-->
                 <li>
                     <h3>Fonts</h3>
                     <li>
-                        <a href="https://github.com/CodeZombie/TypeRip">TypeRip</a>
+                        <a href="https://github.com/CodeZombie/TypeRip" target="_blank">TypeRip</a>
                     - Tool to rip fonts from Adobe
                     </li>
                     <br>
                     <li>
-                        <a href="https://befonts.com/">BeFonts</a>
+                        <a href="https://befonts.com/" target="_blank">BeFonts</a>
                     </li>
                     <br>
                     <li>
-                        <a href="https://all-free-download.com/">All Free Download</a>
+                        <a href="https://all-free-download.com/" target="_blank">All Free Download</a>
                     </li>
                     <br>
                     <li>
-                        <a href="https://www.dafont.com/">DaFont</a>
+                        <a href="https://www.dafont.com/" target="_blank">DaFont</a>
                     </li>
                     <br>
                     <li>
-                        <a href="https://freefontsvault.com">FreeFontsVault</a>
+                        <a href="https://freefontsvault.com" target="_blank">FreeFontsVault</a>
                     </li>
                     <br>
                     <li>
-                        <a href="https://www.fontbrief.com/fontbrief">FontBrief</a>
+                        <a href="https://www.fontbrief.com/fontbrief" target="_blank">FontBrief</a>
                     </li>
+                </li>
+                <hr> <!--Divider-->
+                <h3>Mockups</h3>
+                <li>
+                    <a href="https://placeit.net" target="_blank">PlaceIt</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://pixelbuddha.net" target="_blank">Pixelbudda</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://pixelsurplus.com" target="_blank">Pixel Surplus</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://psdrepo.com" target="_blank">PSD Repo</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://mockuuups.studio" target="_blank">Mockuuups Studio</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://www.pixeden.com" target="_blank">Pixeden</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://mrmockup.com" target="_blank">Mr.Mockup</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://mockups-design.com" target="_blank">Mockups-Design.com</a>
                 </li>
                 <hr> <!--Divider-->
                 <h3>ETC</h3>
                 <li>
-                    <a href="https://www.electronjs.org">ElectronJS</a>
+                    <a href="https://www.electronjs.org" target="_blank">ElectronJS</a>
                     - Build cross-platform desktop apps with JavaScript, HTML, and CSS
                 </li>
                 <br>
@@ -136,59 +224,63 @@
         <hr> <!--Divider-->
 
         <section id="Emulation">
-            <h2>Emulation</h2> <!--Name-->
+            <h2> <img draggable="false" class="emoji" src="assets/icons/video-game-emoji.webp"> Emulation</h2> <!--Name-->
             <p>Emulation sites and tools to play almost any game that's on any console or device.</p> <!--Description-->
             <ul id="links-list">
                 <li>
-                    <a href="https://romspure.cc">RomsPure</a>
+                    <a href="https://romspure.cc" target="_blank">RomsPure</a>
                 </li>
                 <br>
                 <li>
-                    <a href="https://www.romspedia.com/">Romspedia</a>
+                    <a href="https://www.romspedia.com/" target="_blank">Romspedia</a>
+                </li>
+                <br>
+                <li>
+                    <a href="http://ps4pkg.com" target="_blank">PS4pkg</a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://myemulator.online" target="_blank">MyEmulator.Online</a>
+                    - Online Emulator
                 </li>
                 <hr> <!--Divider-->
                 <li>
                     <h3>Nintendo Switch</h3>
                     <li>
-                    <a href="https://nxbrew.com/">NXBrew</a>
-<!--More Text here-->
+                    <a href="https://nxbrew.com/" target="_blank">NXBrew</a>
+                    <!--More Text here-->
                     </li>
                     <br>
                     <li>
-                        <a href="https://nswgame.com/category/switch/">NSWgame</a>
+                        <a href="https://nsw2u.com" target="_blank">nsw2u</a>
+                        </li>
+                        <br>
+                    <li>
+                        <a href="https://nswgame.com/category/switch/" target="_blank">NSWgame</a>
                     </li>
                     <br>
                     <li>
-                        <a href="https://www.ziperto.com/nintendo-switch-nsp/">Ziperto</a>
+                        <a href="https://www.ziperto.com/nintendo-switch-nsp/" target="_blank">Ziperto</a>
+                    </li>
+                    <hr>
+                    <h3>Emulators</h3>
+                    <h4>PlayStation</h4>
+                    <li>
+                    <a href="https://github.com/red-prig/fpPS4/releases" target="_blank">FpPS4</a>
                     </li>
                     <br>
+                    <li>
+                        <a href="https://github.com/AlexAltea/orbital" target="_blank">Orbital (PS)</a>
+                        </li>
+                        <br>
+                    <li>
+                        <a href="https://github.com/Inori/GPCS4" target="_blank">GPCS4</a>
                 </li>
-                <hr> <!--Divider-->
-                <li>
-                    <h3>Videography</h3>
-                    <a href="https://eycndy.co/">EyeCandy</a>
-                    - Visual Technique Library
-                </li>
-                <hr> <!--Divider-->
-                <li>
-                    <h3>Videography</h3>
-                    <a href="https://eycndy.co/">EyeCandy</a>
-                    - Visual Technique Library
-                </li>
-                <hr> <!--Divider-->
-                <li>
-                    <h3>Videography</h3>
-                    <a href="https://eycndy.co/">EyeCandy</a>
-                    - Visual Technique Library
-                </li>
-                <hr> <!--Divider-->
-
             </ul>
         </section>
-
     </main>
     <footer class="footer-text">
-        <a>Made with <img draggable="false" class="emoji" alt="❤️" src="assests/icons/red-heart_emoji.png"> in Florida, USA</a>
+        <a>Made with <img draggable="false" class="emoji" alt="❤️" src="assets/icons/red-heart-emoji.png"> in Florida, USA</a>
         <a>&copy; 2023 SuperList by saber</a>
     </footer>
     

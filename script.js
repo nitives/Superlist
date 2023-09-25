@@ -1,26 +1,34 @@
 // Get references to the button and icon elements
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-const darkModeIcon = document.getElementById('dark-mode-icon');
+const darkIcon = document.getElementById('dark-icon');
 const body = document.body;
 
-// Initialize a variable to track the dark mode state with inverted default
-let isDarkMode = true; // Invert the default mode to dark mode
+// Initialize a variable to track the dark mode state
+let isDarkMode = true;
+let rotationDegree = 0; // Initialize the rotation degree
 
 // Function to toggle dark mode and update the icon and styles accordingly
 function toggleDarkMode() {
-  isDarkMode = !isDarkMode;
+    isDarkMode = !isDarkMode;
 
-  // Toggle the 'dark-mode' class on the body
-  body.classList.toggle('dark-mode');
+    // Toggle the 'dark-mode' class on the body
+    body.classList.toggle('dark-mode');
 
-  // Toggle the icon class based on the dark mode state
-  if (isDarkMode) {
-    darkModeIcon.classList.remove('fa-sun');
-    darkModeIcon.classList.add('fa-moon');
-  } else {
-    darkModeIcon.classList.remove('fa-moon');
-    darkModeIcon.classList.add('fa-sun');
-  }
+    // Update the rotation degree
+    rotationDegree += 180;
+    if (rotationDegree >= 360) {
+        rotationDegree -= 360;
+    }
+
+    // Rotate the icon based on the rotation degree
+    darkIcon.style.transform = `rotate(${rotationDegree}deg)`;
+
+    // Toggle the logo images based on dark mode state
+    const lightLogo = document.getElementById('light-logo');
+    const darkLogo = document.getElementById('dark-logo');
+    
+    lightLogo.hidden = isDarkMode;
+    darkLogo.hidden = !isDarkMode;
 }
 
 // Initially, set the page to the inverted default mode (dark mode)
@@ -28,5 +36,3 @@ toggleDarkMode();
 
 // Add click event listener to the dark mode toggle button
 darkModeToggle.addEventListener('click', toggleDarkMode);
-
-
