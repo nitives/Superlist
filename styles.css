@@ -39,20 +39,9 @@ body {
 
 /* -------------------------------------------------------------------------------------- */
 
-/* Styles that will apply to iPhone's Safari browser only */
+/* Styles that will apply to iPhone's Safari browser only
 @media screen and (max-width: 767px) and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    .safari {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        background: var(--primary);
-        color: var(--primary);
-        min-width: auto; /* Allow the header to shrink freely */
-        height: 100px;
-        z-index: 3;
-    }
-}
+    */
 
 
 /* -------------------------------------------------------------------------------------- */
