@@ -1,7 +1,0 @@
-Your selected colors:
-
-    Text: #ffffff (RGB: 255, 255, 255)
-    Background: #050505 (RGB: 5, 5, 5)
-    Primary: #6d1fdf (RGB: 109, 31, 223)
-    Secondary: #19181B (RGB: 24, 27, 27)
-    Accent: #746c89 (RGB: 116, 108, 137)

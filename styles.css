@@ -8,6 +8,7 @@
 --primary: #6c1fe0;
 --secondary: #f0f0f0;
 --accent: #6e4596;
+--background-brightness: 75%;
 }
 
 body, h1, h2, ul {
@@ -21,14 +22,40 @@ body {
 }
 
 #videoBG {
+    display: block;
+    height: auto;
+    outline: none; /* Remove the outline when the video is focused */
+    border: none; /* Remove any border */
+    background: transparent; /* Make sure the background is transparent */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity */
     position: fixed;
     z-index: -1;
     width: 100%;
     height: auto;
     
-    opacity: 10%;
+    opacity: var(--background-brightness);
     filter: blur(0px);
 }
+
+/* -------------------------------------------------------------------------------------- */
+
+/* Styles that will apply to iPhone's Safari browser only */
+@media screen and (max-width: 767px) and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .safari {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: var(--primary);
+        color: var(--primary);
+        min-width: auto; /* Allow the header to shrink freely */
+        height: 100px;
+        z-index: 3;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
 
 html {
     scroll-behavior: smooth;
@@ -153,6 +180,7 @@ nav {
     height: 1028px;
     padding-top: 1px;
     flex-direction: column;
+    margin: 30px;
     align-items: flex-start;
     gap: 14.5px;
     flex-shrink: 0;
@@ -177,7 +205,7 @@ nav a { /* Nav Links Colors */
 
 nav div {
     color: #050505;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px;
     border: 1px solid #e6e6e6;
     background: #f0f0f0;
     display: flex;
@@ -229,12 +257,19 @@ footer {
     background-color: rgba(13, 13, 13, 0.8);
     color: #3a3a3a;
     gap: 100px;
-    
 }
 
 footer a{
     color: #3a3a3a;
 }
+
+.emoji {
+    display: flex;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.15em;
+  }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
@@ -284,9 +319,16 @@ footer a{
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+.dark-mode nav h2 {
+    color: #fff;
+}
+
 .dark-mode nav div {
     background: #0D0D0D;
     border: 1px solid #202020;
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    backdrop-filter: blur(25px);
 }
 
 .dark-mode nav a { /* Nav Links Colors */
