@@ -3,11 +3,11 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 const darkModeIcon = document.getElementById('dark-mode-icon');
 const body = document.body;
 
-// Initialize a variable to track the dark mode state
-let isDarkMode = false;
+// Initialize a variable to track the dark mode state with inverted default
+let isDarkMode = true; // Invert the default mode to dark mode
 
-// Toggle dark mode and update the icon and styles accordingly
-darkModeToggle.addEventListener('click', () => {
+// Function to toggle dark mode and update the icon and styles accordingly
+function toggleDarkMode() {
   isDarkMode = !isDarkMode;
 
   // Toggle the 'dark-mode' class on the body
@@ -21,4 +21,12 @@ darkModeToggle.addEventListener('click', () => {
     darkModeIcon.classList.remove('fa-moon');
     darkModeIcon.classList.add('fa-sun');
   }
-});
+}
+
+// Initially, set the page to the inverted default mode (dark mode)
+toggleDarkMode();
+
+// Add click event listener to the dark mode toggle button
+darkModeToggle.addEventListener('click', toggleDarkMode);
+
+

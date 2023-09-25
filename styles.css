@@ -20,6 +20,13 @@ body {
     font-family: Inter, sans-serif;
 }
 
+#videoBG {
+    position: fixed;
+    z-index: -1;
+    opacity: 10%;
+    filter: blur(0px);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -187,6 +194,10 @@ footer {
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
 /* Dark Mode */
 .dark-mode {
     background-color: #050505;
@@ -194,7 +205,7 @@ footer {
 }
 
 .dark-mode header {
-        background: linear-gradient(#0d0d0d, #050505);
+        background: linear-gradient(to top, #ff000000, #0d0d0d);
     }
 
 .dark-mode a {
@@ -212,9 +223,10 @@ footer {
 
 .dark-mode section {
     color: #eeeeee;
-    background-color: #0d0d0d;
+    background-color: rgba(13, 13, 13, 0.3);
     border: 1px solid #202020;
     box-shadow: 0px 0px 0px #e6e6e6;
+    backdrop-filter: blur(25px);
 }
 
 .dark-mode hr {

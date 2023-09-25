@@ -3,3 +3,5 @@
 --primary: #6c1fe0;
 --secondary: #19181b;
 --accent: #9169ba;
+
+new grey #838088
