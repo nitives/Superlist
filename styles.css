@@ -23,6 +23,9 @@ body {
 #videoBG {
     position: fixed;
     z-index: -1;
+    width: 100%;
+    height: auto;
+    
     opacity: 10%;
     filter: blur(0px);
 }
@@ -31,17 +34,42 @@ html {
     scroll-behavior: smooth;
 }
 
+/* -------------------------------------------------------------------------------------- */
+
 /* Header styles with logo */
 header {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    min-width: 700px;
     background: #0d0d0d;
     color: #fff;
     text-align: center;
     margin: 0;
     padding: 15px;
     border-radius: 0;
+    transition: min-width 0.5s ease-in-out;
 }
+
+/* Logo */
+img {
+    max-width: 100%; /* Ensure the logo scales down with its container */
+    height: auto;
+    transition: max-width 0.5s ease-in-out;
+}
+
+/* Add a media query for the screen size at which you want the logo to scale */
+@media (max-width: 700px) {
+    header {
+        min-width: auto; /* Allow the header to shrink freely */
+    }
+
+    img {
+        max-width: 90%; /* Adjust this value as needed */
+    }
+}
+
 
 /* Adjust the width to your desired size */
 img {
@@ -51,7 +79,11 @@ img {
     height: auto; /* This maintains the aspect ratio */
 }
 
+/* -------------------------------------------------------------------------------------- */
+
 header h1 {
+    display: flex;
+    justify-content: center;
     color:  #fff;
     font-size: 48px;
 }
@@ -95,14 +127,15 @@ main {
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     background: var(--secondary);
     border-radius: 20px;
     border: 1px solid #e6e6e6;
     box-shadow: 0px 0px 10px #e6e6e6;
-    display: flex;
     padding: 20px 20px 30px 20px;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
 }
 
@@ -145,6 +178,7 @@ nav a { /* Nav Links Colors */
 nav div {
     color: #050505;
     border-radius: 0px 10px 10px 0px;
+    border: 1px solid #e6e6e6;
     background: #f0f0f0;
     display: flex;
     width: 183px;
@@ -188,10 +222,14 @@ p { /* Descriptions */
 footer {
     display: flex;
     justify-content: center;
-    padding: 11px;
-    background-color: #0d0d0d;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    margin: 20px;
+    background-color: rgba(13, 13, 13, 0.8);
     color: #3a3a3a;
     gap: 100px;
+    
 }
 
 footer a{
@@ -248,6 +286,7 @@ footer a{
 
 .dark-mode nav div {
     background: #0D0D0D;
+    border: 1px solid #202020;
 }
 
 .dark-mode nav a { /* Nav Links Colors */
