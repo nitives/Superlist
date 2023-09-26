@@ -1,6 +1,11 @@
-/* Reset some default styles */
+/* Debug "outline: 1px solid red;" */
+
+* {
+    outline: 0px solid red;
+}
 
 
+/* ------------------------------- */
 
 :root {
 --text: #050505;
@@ -8,7 +13,7 @@
 --primary: #6c1fe0;
 --secondary: #f0f0f0;
 --accent: #6e4596;
---background-brightness: 25%;
+--background-brightness: 50%;
 }
 
 body, h1, h2, ul {
@@ -20,6 +25,8 @@ body {
     background-color: var(--background);
     font-family: Inter, sans-serif;
 }
+
+/* -------------------------------------------------------------------------------------- */
 
 #videoBG {
     display: block;
@@ -37,11 +44,6 @@ body {
     filter: blur(0px);
 }
 
-/* -------------------------------------------------------------------------------------- */
-
-/* Styles that will apply to iPhone's Safari browser only
-@media screen and (max-width: 767px) and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    */
 
 
 /* -------------------------------------------------------------------------------------- */
@@ -86,6 +88,11 @@ img {
     }
 }
 
+video source {
+    max-width: 1690;
+    outline: 1px solid red;
+    filter: invert();
+}
 
 /* Adjust the width to your desired size */
 img {
@@ -184,7 +191,7 @@ nav {
     left: 77px;
     right: 0px;
     width: 183px;
-    height: 1028px;
+    height: 500px;
     padding-top: 1px;
     flex-direction: column;
     margin: 30px;
@@ -199,7 +206,7 @@ nav h2 { /* Nav Title Color */
     display: flex;
     width: 163px;
     height: 40px;
-    padding: 1px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
     flex-direction: column;
     align-items: flex-start;
     gap: 4.5px;
@@ -262,12 +269,13 @@ p { /* Descriptions */
 
 /* --------------------------------------------- */
 
-b { 
+i b { 
     display: flex;
     position: relative;
     opacity: 20%;
     box-shadow: #eeeeee;
     bottom: 11px;
+    margin-top: -400px;
 }
 
 .glow {
@@ -319,8 +327,36 @@ footer a{
     filter: invert(1);
 }
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+
 .dark-mode #videoBG {
+    position: fixed;
+    z-index: -1;
+
+    opacity: var(--background-brightness);
+    filter: blur(0px);
+}
+@media (min-aspect-ratio: 16/9) {
+    .dark-mode #videoBG {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .dark-mode #videoBG {
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width: 1700px) {
+    .dark-mode #videoBG {
+        background: url("/assets/background/boster.png");
+    }
+}
+
+.dark-mode #vdeoBG {
     display: block;
+    justify-content: center;
     height: auto;
     outline: none; /* Remove the outline when the video is focused */
     border: none; /* Remove any border */
@@ -334,6 +370,8 @@ footer a{
     opacity: var(--background-brightness);
     filter: blur(0px);
 }
+
+/* ------------------------------------------------------------------------------------------------------------------- */
 
 .dark-mode header {
         background: linear-gradient(to top, #ff000000, #0d0d0d);
@@ -384,6 +422,15 @@ footer a{
 .dark-mode footer a{
     font-weight: 100;
     color: #3a3a3a;
+}
+
+.dark-mode i b { 
+    display: flex;
+    position: relative;
+    opacity: 20%;
+    box-shadow: #eeeeee;
+    bottom: 11px;
+    margin-top: 0px;
 }
 
 
