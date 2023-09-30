@@ -142,6 +142,7 @@ header .emoji {
         width: calc(100% - 10px );
     }
 }
+
 /* -------------------------------------------------------------------------------------- */
 
 /* Apply styles to the <hr>/the divider element */
@@ -263,6 +264,7 @@ nav div {
     }
   }
 
+
 /* -------------------------------------------------------------------------------------- */
 
 h2 {
@@ -333,6 +335,41 @@ footer a{
     height: 1em;
     vertical-align: -.15em;
   }
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+    footer {
+        margin: 5px;
+    }
+}
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 550px) {
+    footer {
+        gap: 90px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    footer {
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    footer {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer {
+        gap: 1px;
+    }
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
@@ -432,15 +469,9 @@ header p {
 }
 
 .dark-mode footer {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
     border: 1px solid #202020;
-    margin: 20px;
     background-color: rgba(13, 13, 13, 0.8);
     color: #3a3a3a;
-    gap: 100px;
 }
 
 .dark-mode footer a{
