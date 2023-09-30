@@ -141,6 +141,10 @@ header .emoji {
     .main-header {
         width: calc(100% - 10px );
     }
+    header .emoji {
+        position: relative;
+        top: -10px;
+    }
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -430,7 +434,8 @@ footer a{
 /* ------------------------------------------------------------------------------------------------------------------- */
 
 .dark-mode .main-header {
-    background-color: rgba(13, 13, 13, 0.8);
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.5), transparent);
+    background-color: rgba(13, 13, 13, 0.3);
     border: 1px solid #202020;
     box-shadow: 0px 0px 0px #e6e6e6;
 }
