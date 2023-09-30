@@ -82,7 +82,7 @@ header p {
 
 header .hero-button {
     position: relative;
-    top: 6px;
+    top: 2px;
 }
 
 /* --------------------------------------------- */
@@ -90,6 +90,8 @@ header .hero-button {
 header img {
     width: 199px;
     height: 27px;
+    position: relative;
+    top: 4px;
 }
 
 /* --------------------------------------------- */
@@ -327,7 +329,7 @@ footer a{
 
 /* Dark Mode */
 .dark-mode {
-    background-color: #050505;
+    background-color: #020104; /* Old - #050505; */
     color: #fff;
 }
 
