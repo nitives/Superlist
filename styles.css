@@ -94,6 +94,11 @@ header img {
     top: 4px;
 }
 
+header .emoji {
+    position: relative;
+    top: 0px;
+}
+
 /* --------------------------------------------- */
 
 @media screen and (max-width: 900px) {
