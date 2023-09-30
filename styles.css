@@ -1,7 +1,8 @@
 /* Debug "outline: 1px solid red;" */
 
 * {
-    outline: 0px solid red;
+    outline: 0px solid rgba(255, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
 
@@ -16,6 +17,10 @@
 --background-brightness: 50%;
 }
 
+html, body {
+    min-height: 100%;
+}
+
 body, h1, h2, ul {
     margin: 0;
     padding: 0;
@@ -26,9 +31,11 @@ body {
     font-family: Inter, sans-serif;
 }
 
+
 /* -------------------------------------------------------------------------------------- */
 
 #videoBG {
+    top: -1px;
     display: block;
     height: auto;
     outline: none; /* Remove the outline when the video is focused */
@@ -44,8 +51,6 @@ body {
     filter: blur(0px);
 }
 
-
-
 /* -------------------------------------------------------------------------------------- */
 
 html {
@@ -54,74 +59,76 @@ html {
 
 /* -------------------------------------------------------------------------------------- */
 
-/* Header styles with logo */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-width: 700px;
-    background: linear-gradient(to top, var(--background), #d4d4d4);
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 15px;
-    border-radius: 0;
-    transition: min-width 0.5s ease-in-out;
-}
-
-/* Logo */
-img {
-    max-width: 100%; /* Ensure the logo scales down with its container */
-    height: auto;
-    transition: max-width 0.5s ease-in-out;
-}
-
-/* Add a media query for the screen size at which you want the logo to scale */
-@media (max-width: 700px) {
-    header {
-        min-width: auto; /* Allow the header to shrink freely */
-    }
-
-    img {
-        max-width: 90%; /* Adjust this value as needed */
-    }
-}
-
-video source {
-    max-width: 1690;
-    outline: 1px solid red;
-    filter: invert();
-}
-
-/* Adjust the width to your desired size */
-img {
-    align-items: center;
-    justify-content: center;
-    width: 700px; /* Change this value as needed */
-    height: auto; /* This maintains the aspect ratio */
-}
-
-/* -------------------------------------------------------------------------------------- */
-
-header h1 {
+.main-header {
     display: flex;
     justify-content: center;
-    color:  #fff;
-    font-size: 48px;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 120px;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+
+    border-radius: 20px;
+    border: 1px solid #202020;
+    background: var(--secondary);
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 10px #e6e6e6;
 }
 
 header p {
-    position: relative;
-    font-size: 23px;
-    bottom: 30px;
-    left: 10px;
-    color:  var(--text);
+    color: var(--text);
+    text-align: center;
 }
 
-header #hero-logo {
-    margin-top: 200px;
+header .hero-button {
+    position: relative;
+    top: 6px;
 }
+
+/* --------------------------------------------- */
+
+header img {
+    width: 199px;
+    height: 27px;
+}
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        text-align: center;
+        gap: 1px;
+    }
+    
+    header img {
+        width: calc(199px * 1.2);
+        height: calc(27px * 1.2);
+        margin-bottom: -10px;
+    }
+
+    header button {
+        position: relative;
+        bottom: 15px;
+    }
+
+    header p {
+        font-size: 14px;
+        position: relative;
+        bottom: 3px;
+    }
+
+    header p img {
+        position: relative;
+        bottom: 10px;
+    }
+  }
+
+/* -------------------------------------------------------------------------------------- */
+
 
 /* Apply styles to the <hr>/the divider element */
 hr {
@@ -174,6 +181,7 @@ section {
     box-shadow: 0px 0px 10px #e6e6e6;
     padding: 20px 20px 20px 20px;
     gap: 10px;
+    
 }
 
 section i {
@@ -198,7 +206,7 @@ nav {
     align-items: flex-start;
     gap: 14.5px;
     flex-shrink: 0;
-    z-index: 1000;
+    z-index: 888;
 }
 
 nav h2 { /* Nav Title Color */
@@ -373,17 +381,23 @@ footer a{
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
-.dark-mode header {
-        background: linear-gradient(to top, #ff000000, #0d0d0d);
-    }
+.dark-mode .main-header {
+    background-color: rgba(13, 13, 13, 0.8);
+    border: 1px solid #202020;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+header p {
+    color: var(--text);
+}
+
+/* ------------------------------------------------------------------------- */
+
 
 .dark-mode a {
     color: var(--primary);
 }
 
-.dark-mode header p {
-    color: #fff;
-}
 
 .dark-mode p {
     color: #b9b9b9;
@@ -416,7 +430,6 @@ footer a{
     background-color: rgba(13, 13, 13, 0.8);
     color: #3a3a3a;
     gap: 100px;
-    background-color: rgba(13, 13, 13, 0.8);
 }
 
 .dark-mode footer a{
