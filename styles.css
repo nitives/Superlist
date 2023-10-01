@@ -65,7 +65,7 @@ html {
     justify-content: center;
     align-items: center;
     padding: 10px 30px;
-    gap: 120px;
+    gap: 60px;
     width: calc(100% - 40px);
     margin: 20px auto;
 
@@ -77,7 +77,6 @@ html {
 }
 
 header p {
-    color: var(--text);
     text-align: center;
 }
 
@@ -99,6 +98,29 @@ header .emoji {
     position: relative;
     top: 0px;
 }
+
+/* --------------------------------------------- */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials img {
+    width: 24px;
+}
+
+.socials button {
+    position: relative;
+    top: 2.9px;
+    right: 6px;
+}
+
+div li {
+    list-style-type: none; /* Remove bullets */
+  }
 
 /* --------------------------------------------- */
 
@@ -444,6 +466,11 @@ header p {
     color: var(--text);
 }
 
+/* --------------------------------------------- */
+
+.dark-mode .socials img {
+    filter: invert(100%)
+}
 /* ------------------------------------------------------------------------- */
 
 
