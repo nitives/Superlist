@@ -114,13 +114,30 @@ header .emoji {
 
 .socials button {
     position: relative;
-    top: 2.9px;
+    top: 2.1px;
     right: 6px;
 }
 
 div li {
     list-style-type: none; /* Remove bullets */
   }
+
+/* ----------------------- */
+
+  @media screen and (max-width: 900px) {
+.socials {
+    position: relative;
+    bottom: 12px;
+    left: 1px;
+}
+}
+
+@media screen and (max-width: 900px) {
+.socials .hero-button {
+    position: relative;
+    top: -3px;
+}
+}
 
 /* --------------------------------------------- */
 
