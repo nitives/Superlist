@@ -253,6 +253,10 @@ section i {
     color: var(--text);
 }
 
+section .h2-space {
+    margin-top: 30px;
+}
+
 /* --------------------------------------------- */
 
 /* Hover Links */
