@@ -18,6 +18,11 @@
 --background-brightness: 50%;
 }
 
+::selection {
+    color: #f0f0f0;
+    background: #6c1fe0;
+  }
+
 html, body {
     min-height: 100%;
 }
@@ -74,6 +79,7 @@ html {
     background: var(--secondary);
     border: 1px solid #e6e6e6;
     box-shadow: 0px 0px 10px #e6e6e6;
+    z-index: 9999;
 }
 
 header p {
@@ -247,6 +253,11 @@ section i {
     color: var(--text);
 }
 
+/* --------------------------------------------- */
+
+/* Hover Links */
+
+
 /* -------------------------------------------------------------------------------------- */
 
 /* Navigation Bar */
@@ -337,7 +348,7 @@ p { /* Descriptions */
 
 /* --------------------------------------------- */
 
-i b { 
+i b {
     display: flex;
     position: relative;
     opacity: 20%;
@@ -513,8 +524,20 @@ header p {
     color: var(--secondary)
 }
 
+.dark-mode section h3 {
+    color: #eeeeee
+}
+
+.dark-mode section li {
+    color: #a1a1a1;
+}
+
 .dark-mode hr {
-    border-color: #202020; /* Color of the line */
+    border-color: hsla(0, 0%, 13%, 0.5); /* Color of the dividers in dark mode */
+}
+
+.dark-mode h2 {
+    color: #eee;
 }
 
 .dark-mode footer {
