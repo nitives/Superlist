@@ -257,6 +257,11 @@ section .h2-space {
     margin-top: 30px;
 }
 
+section .p-space {
+    margin-top: -15px;
+    font-weight: 500;
+}
+
 /* --------------------------------------------- */
 
 /* Hover Links */
