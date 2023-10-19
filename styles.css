@@ -67,6 +67,9 @@ html {
 
 .main-header {
     display: flex;
+    position: fixed;
+    top: 0px;
+    left: 20px;
     justify-content: center;
     align-items: center;
     padding: 10px 30px;
@@ -80,6 +83,7 @@ html {
     border: 1px solid #e6e6e6;
     box-shadow: 0px 0px 10px #e6e6e6;
     z-index: 9999;
+    backdrop-filter: blur(5px);
 }
 
 header p {
@@ -184,14 +188,17 @@ div li {
 
 @media screen and (max-width: 900px) {
     .main-header {
+        padding: 10px;
         width: calc(100% - 10px );
+        height: calc(20% - 70px );
+        left: 0px;
+        left: 6px;
     }
     header .emoji {
         position: relative;
         top: -10px;
     }
 }
-
 /* -------------------------------------------------------------------------------------- */
 
 /* Apply styles to the <hr>/the divider element */
@@ -231,7 +238,10 @@ button#dark-mode-toggle {
 
 main {
     max-width: 1200px;
-    margin: 20px auto;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 5px;
 }
 
@@ -246,7 +256,6 @@ section {
     box-shadow: 0px 0px 10px #e6e6e6;
     padding: 20px 20px 20px 20px;
     gap: 10px;
-    
 }
 
 section i {
@@ -264,7 +273,12 @@ section .p-space {
 
 /* --------------------------------------------- */
 
-/* Hover Links */
+/* Pandabuy Page */
+
+.dark-mode .section-pandabuy {
+  margin: auto; /* center */
+  width: 10px;
+}
 
 
 /* -------------------------------------------------------------------------------------- */
@@ -469,7 +483,7 @@ footer a{
 }
 @media (max-width: 1700px) {
     .dark-mode #videoBG {
-        background: url("/assets/background/boster.png");
+        background: url("assets/background/poster.png");
     }
 }
 
@@ -495,7 +509,7 @@ footer a{
 .dark-mode .main-header {
     background: linear-gradient(180deg, rgba(13, 13, 13, 0.5), transparent);
     background-color: rgba(13, 13, 13, 0.3);
-    border: 1px solid #202020;
+    border: 1px solid #ffffff10;
     box-shadow: 0px 0px 0px #e6e6e6;
 }
 
@@ -524,7 +538,7 @@ header p {
 .dark-mode section {
     color: #eeeeee;
     background-color: rgba(13, 13, 13, 0.3);
-    border: 1px solid #202020;
+    border: 1px solid #ffffff10;
     box-shadow: 0px 0px 0px #e6e6e6;
     backdrop-filter: blur(25px);
 }
@@ -550,7 +564,7 @@ header p {
 }
 
 .dark-mode footer {
-    border: 1px solid #202020;
+    border: 1px solid #ffffff10;
     background-color: rgba(13, 13, 13, 0.8);
     color: #3a3a3a;
 }
@@ -580,7 +594,7 @@ header p {
 
 .dark-mode nav div {
     background: #0D0D0D;
-    border: 1px solid #202020;
+    border: 1px solid #ffffff10;
     color: #eeeeee;
     background-color: rgba(13, 13, 13, 0.3);
     backdrop-filter: blur(25px);
@@ -601,8 +615,8 @@ header p {
  ::-webkit-scrollbar-corner,
  ::-webkit-scrollbar,
 ::-webkit-scrollbar-corner {
-    background: var(--bg-color) !important;
-    width: 8px
+    background: black !important; /* Background Scroll Bar Color */
+    width: 10px;
   }
 ::-webkit-scrollbar-button,
  ::-webkit-scrollbar-button {
@@ -610,10 +624,10 @@ header p {
   }
 ::-webkit-scrollbar-thumb,
  ::-webkit-scrollbar-thumb {
-    background: #0d0d0d !important; /* Scroll Bar Color */
+    background: #0c0c0c !important; /* Scroll Bar Color */
     width: 8px !important;
     border-radius: 10px;
-     transition: .1s !important;
+    transition: .1s !important;
   }
 ::-webkit-scrollbar-thumb:not(:active):hover,
  ::-webkit-scrollbar-thumb:not(:active):hover {
@@ -627,5 +641,4 @@ header p {
     background: #202020 !important;
      transition: .1s !important;
   }
-
   /* ------------------------------------------------------------------------------------------------------------------- */
