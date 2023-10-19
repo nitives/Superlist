@@ -145,7 +145,7 @@ div li {
 @media screen and (max-width: 900px) {
 .socials .hero-button {
     position: relative;
-    top: -3px;
+    top: -1px;
 }
 }
 
@@ -162,14 +162,9 @@ div li {
     }
     
     header img {
-        width: calc(199px * 1.2);
-        height: calc(27px * 1.2);
+        width: calc(199px * 0.8);
+        height: calc(27px * 0.8);
         margin-bottom: -10px;
-    }
-
-    header button {
-        position: relative;
-        bottom: 15px;
     }
 
     header p {
@@ -190,9 +185,10 @@ div li {
     .main-header {
         padding: 10px;
         width: calc(100% - 10px );
-        height: calc(20% - 70px );
+        height: calc(20% - 60px );
         left: 0px;
         left: 6px;
+        top: -8px;
     }
     header .emoji {
         position: relative;
