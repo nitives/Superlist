@@ -7,6 +7,10 @@
 }
 
 
+.dark-mode #videoBG {
+    filter: hue-rotate(90deg)
+}
+
 /* ------------------------------- */
 
 :root {
@@ -16,6 +20,7 @@
 --secondary: #f0f0f0;
 --accent: #6e4596;
 --background-brightness: 50%;
+--hue-rotate-angle: 0deg; 
 }
 
 ::selection {
@@ -55,6 +60,10 @@ body {
     
     opacity: 0%;
     filter: blur(0px);
+}
+
+#video-st {
+    filter: invert(0);
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -483,7 +492,7 @@ footer a{
     }
 }
 
-.dark-mode #vdeoBG {
+.dark-mode #videoBG {
     display: block;
     justify-content: center;
     height: auto;
@@ -498,6 +507,12 @@ footer a{
     
     opacity: var(--background-brightness);
     filter: blur(0px);
+}
+
+/* ----------Hue of site---------- */
+
+.dark-mode #videoBG, .dark-mode .main-header .logo, .dark-mode a, .dark-mode nav h2 {
+    filter: hue-rotate(var(--hue-rotate-angle));
 }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
