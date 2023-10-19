@@ -15,7 +15,7 @@
 --secondary: #f0f0f0;
 --accent: #6e4596;
 --background-brightness: 50%;
---hue-rotate-angle: 90deg; 
+--hue-rotate-angle: 0deg; 
 }
 
 ::selection {
@@ -506,7 +506,7 @@ footer a{
 
 /* ----------Hue of site---------- */
 
-.dark-mode #videoBG, .dark-mode .main-header .logo, .dark-mode nav h2, .dark-mode a {
+ .dark-mode #videoBG, .main-header .logo, nav h2, a {
     filter: hue-rotate(var(--hue-rotate-angle));
 }
 
