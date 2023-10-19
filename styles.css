@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-
-.dark-mode #videoBG {
-    filter: hue-rotate(90deg)
-}
-
 /* ------------------------------- */
 
 :root {
@@ -20,12 +15,12 @@
 --secondary: #f0f0f0;
 --accent: #6e4596;
 --background-brightness: 50%;
---hue-rotate-angle: 0deg; 
+--hue-rotate-angle: 90deg; 
 }
 
 ::selection {
     color: #f0f0f0;
-    background: #6c1fe0;
+    background: var(--primary);
   }
 
 html, body {
@@ -511,7 +506,7 @@ footer a{
 
 /* ----------Hue of site---------- */
 
-.dark-mode #videoBG, .dark-mode .main-header .logo, .dark-mode a, .dark-mode nav h2 {
+.dark-mode #videoBG, .dark-mode .main-header .logo, .dark-mode nav h2, .dark-mode a {
     filter: hue-rotate(var(--hue-rotate-angle));
 }
 
@@ -531,8 +526,9 @@ header p {
 /* --------------------------------------------- */
 
 .dark-mode .socials img {
-    filter: invert(100%)
+    filter: invert(1)
 }
+
 /* ------------------------------------------------------------------------- */
 
 
