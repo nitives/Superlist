@@ -40,32 +40,27 @@ toggleDarkMode();
 darkModeToggle.addEventListener('click', toggleDarkMode);
 
 
-// Ad Block Detect
+// Ad Black Detect
+
 const detect = document.querySelector("#detect");
 const wrapper = document.querySelector(".wrapper");
-const button = detect.querySelector("button");
+const button = wrapper.querySelector("button");
 
 let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
 for (let item of adClasses) {
-    detect.classList.add(item);
-}
-
-// Function to show #detect
-function showDetection() {
-    detect.classList.add("show");
-    wrapper.classList.remove("show");
+detect.classList.add(item);
 }
 
 // Function to show both #detect and .wrapper
-function showBoth() {
-    detect.classList.add("show");
-    wrapper.classList.add("show");
+function showDetection() {
+detect.classList.add("show");
+wrapper.classList.add("show");
 }
 
 // Function to hide both #detect and .wrapper
 function hideDetection() {
-    detect.classList.remove("show");
-    wrapper.classList.remove("show");
+detect.classList.remove("show");
+wrapper.classList.remove("show");
 }
 
 button.addEventListener("click", hideDetection);
@@ -74,23 +69,28 @@ button.addEventListener("click", hideDetection);
 hideDetection();
 
 document.addEventListener('DOMContentLoaded', function () {
-    var refreshButton = document.getElementById('refreshButton');
-    if (refreshButton) {
-        refreshButton.addEventListener('click', function () {
-            location.reload(); // Reload the page
-        });
-    }
+var refreshButton = document.getElementById('refreshButton');
+if (refreshButton) {
+    refreshButton.addEventListener('click', function () {
+    location.reload(); // Reload the page
+    });
+}
 });
 
 // Console Log
 document.addEventListener('DOMContentLoaded', function () {
     const adBlockDetectionElement = document.querySelector('.ad-block-detection-element');
     
-    if (adBlockDetectionElement) {
+    if (!adBlockDetectionElement) {
         // Ad blocker detected
-        console.log("You're using an ad blocker and preventing me from generating revenue. Please consider disabling it.");
-        // Show #detect only when an ad blocker is detected
-        showDetection();
+        console.log("ur using a adblock and stop me from making racks dud (╥﹏╥)");
+        console.log("also wat are u doing here in the console???");}
+
+    var refreshButton = document.getElementById('refreshButton');
+    if (refreshButton) {
+        refreshButton.addEventListener('click', function () {
+            location.reload(); // Reload the page
+        });
     }
 });
 
