@@ -54,19 +54,24 @@ detect.classList.add(item);
 // Function to show both #detect and .wrapper
 function showDetection() {
 detect.classList.add("show");
+console.log("Show - detect");
 wrapper.classList.add("show");
+console.log("Show - wrapper");
 }
 
 // Function to hide both #detect and .wrapper
 function hideDetection() {
 detect.classList.remove("show");
+console.log("Hide - detect");
 wrapper.classList.remove("show");
+console.log("Hide - wrapper");
 }
 
 button.addEventListener("click", hideDetection);
 
 // Initially, hide #detect and .wrapper
 hideDetection();
+console.log("Initial hide");
 
 document.addEventListener('DOMContentLoaded', function () {
 var refreshButton = document.getElementById('refreshButton');
