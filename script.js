@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     adBlockDetectionElement.className = 'ad-block-detection-element';
     adBlockDetectionElement.style.height = '1px'; // An invisible element that ad-blockers usually remove
 
+    // Append the adBlockDetectionElement after the DOM has loaded
     document.body.appendChild(adBlockDetectionElement);
 
     // Check if the ad-blocker detection element is hidden by an ad-blocker
@@ -80,6 +81,5 @@ document.addEventListener('DOMContentLoaded', function () {
         closeButton.addEventListener("click", hideDetection);
     }
 });
-
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------
