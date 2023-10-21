@@ -40,59 +40,58 @@ toggleDarkMode();
 darkModeToggle.addEventListener('click', toggleDarkMode);
 
 
-// Ad Black Detect
+// Ad Block Detect
+const detect = document.querySelector("#detect");
+const wrapper = document.querySelector(".wrapper");
+const button = detect.querySelector("button");
 
-    const detect = document.querySelector("#detect");
-    const wrapper = document.querySelector(".wrapper");
-    const button = wrapper.querySelector("button");
-
-    let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
-    for (let item of adClasses) {
+let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
+for (let item of adClasses) {
     detect.classList.add(item);
-    }
+}
 
-    // Function to show both #detect and .wrapper
-    function showDetection() {
+// Function to show #detect
+function showDetection() {
+    detect.classList.add("show");
+    wrapper.classList.remove("show");
+}
+
+// Function to show both #detect and .wrapper
+function showBoth() {
     detect.classList.add("show");
     wrapper.classList.add("show");
-    }
+}
 
-    // Function to hide both #detect and .wrapper
-    function hideDetection() {
+// Function to hide both #detect and .wrapper
+function hideDetection() {
     detect.classList.remove("show");
     wrapper.classList.remove("show");
-    }
+}
 
-    button.addEventListener("click", hideDetection);
+button.addEventListener("click", hideDetection);
 
-    // Initially, hide #detect and .wrapper
-    hideDetection();
+// Initially, hide #detect and .wrapper
+hideDetection();
 
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     var refreshButton = document.getElementById('refreshButton');
     if (refreshButton) {
         refreshButton.addEventListener('click', function () {
-        location.reload(); // Reload the page
+            location.reload(); // Reload the page
         });
     }
-    });
+});
 
-    // Console Log
-    document.addEventListener('DOMContentLoaded', function () {
-        const adBlockDetectionElement = document.querySelector('.ad-block-detection-element');
-        
-        if (!adBlockDetectionElement) {
-            // Ad blocker detected
-            console.log("ur using a adblock and stop me from making racks dud (╥﹏╥)");
-            console.log("also wat are u doing here in the console???");}
+// Console Log
+document.addEventListener('DOMContentLoaded', function () {
+    const adBlockDetectionElement = document.querySelector('.ad-block-detection-element');
     
-        var refreshButton = document.getElementById('refreshButton');
-        if (refreshButton) {
-            refreshButton.addEventListener('click', function () {
-                location.reload(); // Reload the page
-            });
-        }
-    });
-    
+    if (adBlockDetectionElement) {
+        // Ad blocker detected
+        console.log("You're using an ad blocker and preventing me from generating revenue. Please consider disabling it.");
+        // Show #detect only when an ad blocker is detected
+        showDetection();
+    }
+});
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------
