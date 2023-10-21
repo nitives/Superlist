@@ -31,52 +31,50 @@ function toggleDarkMode() {
     darkLogo.hidden = !isDarkMode;
 }
 
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+
 // Initially, set the page to the inverted default mode (dark mode)
 toggleDarkMode();
 
 // Add click event listener to the dark mode toggle button
 darkModeToggle.addEventListener('click', toggleDarkMode);
 
+
 // Ad Black Detect
+
     const detect = document.querySelector("#detect");
     const wrapper = document.querySelector(".wrapper");
     const button = wrapper.querySelector("button");
 
     let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
-    for(let item of adClasses){
-      detect.classList.add(item);
+    for (let item of adClasses) {
+    detect.classList.add(item);
     }
-    let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
-    if(!wrapper.classList.contains("show")){
-      getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
+
+    // Function to show both #detect and .wrapper
+    function showDetection() {
+    detect.classList.add("show");
+    wrapper.classList.add("show");
     }
-    button.addEventListener("click", ()=>{
-      wrapper.classList.remove("show");
-    });
+
+    // Function to hide both #detect and .wrapper
+    function hideDetection() {
+    detect.classList.remove("show");
+    wrapper.classList.remove("show");
+    }
+
+    button.addEventListener("click", hideDetection);
+
+    // Initially, hide #detect and .wrapper
+    hideDetection();
 
     document.addEventListener('DOMContentLoaded', function () {
-        var refreshButton = document.getElementById('refreshButton');
-        if (refreshButton) {
-            refreshButton.addEventListener('click', function () {
-                location.reload(); // Reload the page
-            });
-        }
-    });
-    // Find the button element by its ID
-    const refreshButton = document.getElementById("refreshButton");
-
-    // Find the detect and wrapper elements
-    const detectElement = document.getElementById("detect");
-    const wrapperElement = document.querySelector(".wrapper");
-
-    // Add a click event listener to the button
-    refreshButton.addEventListener("click", function() {
-    // Toggle the visibility of detect and wrapper
-    if (detectElement.style.display === "none") {
-        detectElement.style.display = "block";
-        wrapperElement.style.display = "block";
-    } else {
-        detectElement.style.display = "none";
-        wrapperElement.style.display = "none";
+    var refreshButton = document.getElementById('refreshButton');
+    if (refreshButton) {
+        refreshButton.addEventListener('click', function () {
+        location.reload(); // Reload the page
+        });
     }
     });
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------
