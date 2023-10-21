@@ -53,3 +53,12 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
     button.addEventListener("click", ()=>{
       wrapper.classList.remove("show");
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var refreshButton = document.getElementById('refreshButton');
+        if (refreshButton) {
+            refreshButton.addEventListener('click', function () {
+                location.reload(); // Reload the page
+            });
+        }
+    });
