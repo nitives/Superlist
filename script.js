@@ -77,4 +77,22 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
     }
     });
 
+    // Console Log
+    document.addEventListener('DOMContentLoaded', function () {
+        const adBlockDetectionElement = document.querySelector('.ad-block-detection-element');
+        
+        if (!adBlockDetectionElement) {
+            // Ad blocker detected
+            console.log("ur using a adblock and stop me from making racks dud (╥﹏╥)");
+            console.log("also wat are u doing here in the console???");}
+    
+        var refreshButton = document.getElementById('refreshButton');
+        if (refreshButton) {
+            refreshButton.addEventListener('click', function () {
+                location.reload(); // Reload the page
+            });
+        }
+    });
+    
+
 // -----------------------------------------------------------------------------------------------------------------------------------------------
