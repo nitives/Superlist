@@ -54,6 +54,13 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
       wrapper.classList.remove("show");
     });
 
+    if(!detect.classList.contains("show")){
+        getProperty == "none" ? detect.classList.add("show") : detect.classList.remove("show");
+      }
+      button.addEventListener("click", ()=>{
+        detect.classList.remove("show");
+      });
+
     document.addEventListener('DOMContentLoaded', function () {
         var refreshButton = document.getElementById('refreshButton');
         if (refreshButton) {
@@ -62,21 +69,4 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
             });
         }
     });
-    // Find the button element by its ID
-    const refreshButton = document.getElementById("refreshButton");
-
-    // Find the detect and wrapper elements
-    const detectElement = document.getElementById("detect");
-    const wrapperElement = document.querySelector(".wrapper");
-
-    // Add a click event listener to the button
-    refreshButton.addEventListener("click", function() {
-    // Toggle the visibility of detect and wrapper
-    if (detectElement.style.display === "none") {
-        detectElement.style.display = "block";
-        wrapperElement.style.display = "block";
-    } else {
-        detectElement.style.display = "none";
-        wrapperElement.style.display = "none";
-    }
-    });
+    
