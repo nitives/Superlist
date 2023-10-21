@@ -39,64 +39,47 @@ toggleDarkMode();
 // Add click event listener to the dark mode toggle button
 darkModeToggle.addEventListener('click', toggleDarkMode);
 
+// -----------------------------------------------------------------------------------------------------------------------------------------------
 
-// Ad Black Detect
-
-const detect = document.querySelector("#detect");
-const wrapper = document.querySelector(".wrapper");
-const button = wrapper.querySelector("button");
-
-let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
-for (let item of adClasses) {
-detect.classList.add(item);
-}
-
-// Function to show both #detect and .wrapper
-function showDetection() {
-detect.classList.add("show");
-console.log("Show - detect");
-wrapper.classList.add("show");
-console.log("Show - wrapper");
-}
-
-// Function to hide both #detect and .wrapper
-function hideDetection() {
-detect.classList.remove("show");
-console.log("Hide - detect");
-wrapper.classList.remove("show");
-console.log("Hide - wrapper");
-}
-
-button.addEventListener("click", hideDetection);
-
-// Initially, hide #detect and .wrapper
-hideDetection();
-console.log("Initial hide");
-
+// Ad Block Detect
 document.addEventListener('DOMContentLoaded', function () {
-var refreshButton = document.getElementById('refreshButton');
-if (refreshButton) {
-    refreshButton.addEventListener('click', function () {
-    location.reload(); // Reload the page
-    });
-}
-});
+    const detect = document.querySelector("#detect");
+    const wrapper = document.querySelector(".wrapper");
 
-// Console Log
-document.addEventListener('DOMContentLoaded', function () {
-    const adBlockDetectionElement = document.querySelector('.ad-block-detection-element');
-    
-    if (!adBlockDetectionElement) {
-        // Ad blocker detected
-        console.log("ur using a adblock and stop me from making racks dud (╥﹏╥)");
-        console.log("also wat are u doing here in the console???");}
+    console.log("Detection started...");
 
-    var refreshButton = document.getElementById('refreshButton');
-    if (refreshButton) {
-        refreshButton.addEventListener('click', function () {
-            location.reload(); // Reload the page
-        });
+    const adBlockDetectionElement = document.createElement('div');
+    adBlockDetectionElement.className = 'ad-block-detection-element';
+    adBlockDetectionElement.style.height = '1px'; // An invisible element that ad-blockers usually remove
+
+    document.body.appendChild(adBlockDetectionElement);
+
+    // Check if the ad-blocker detection element is hidden by an ad-blocker
+    if (adBlockDetectionElement.offsetHeight === 0) {
+        // Ad-blocker detected
+        console.log("Ad-blocker detected.");
+        detect.style.display = 'block';
+        wrapper.style.display = 'block';
+    } else {
+        console.log("No ad-blocker detected.");
+    }
+
+    // Function to hide both #detect and .wrapper
+    function hideDetection() {
+        detect.style.display = 'none';
+        wrapper.style.display = 'none';
+    }
+
+    // Initially, hide #detect and .wrapper
+    hideDetection();
+
+    // You can add an event listener to a button inside your .wrapper to hide the elements when the user clicks the button.
+    // Example:
+    const closeButton = wrapper.querySelector("#refreshButton");
+    if (closeButton) {
+        closeButton.addEventListener("click", hideDetection);
     }
 });
+
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------
