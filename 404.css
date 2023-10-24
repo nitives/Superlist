@@ -42,26 +42,16 @@ body {
 /* -------------------------------------------------------------------------------------- */
 
 #videoBG {
-    overflow: hidden;
-    top: -1px;
-    display: block;
-    height: auto;
-    outline: none; /* Remove the outline when the video is focused */
-    border: none; /* Remove any border */
-    background: transparent; /* Make sure the background is transparent */
-    cursor: pointer; /* Use a pointer cursor to indicate interactivity */
-    position: fixed;
-    z-index: -1;
+    object-fit: cover;
     width: 100%;
-    height: auto;
-    
-    opacity: 0%;
-    filter: blur(0px);
-}
-
-#video-st {
-    filter: invert(0);
-}
+    height: 100vh; /* Set the video's height to 100% of the viewport height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(0, 0);
+    opacity: 0;
+  }
 
 /* -------------------------------------------------------------------------------------- */
 
@@ -219,6 +209,7 @@ header img {
     height: 27px;
     position: relative;
     top: 4px;
+    filter: grayscale();
 }
 
 header .emoji {
@@ -580,6 +571,8 @@ footer a{
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+/* ----------Video Dark Mode---------- */
+
 .dark-mode #videoBG {
     object-fit: cover;
     width: 100%;
@@ -601,7 +594,7 @@ footer a{
 
 /* ----------Hue of site---------- */
 
- .dark-mode #videoBG, .main-header .logo, nav h2, a {
+ .main-header .logo, nav h2, a {
     filter: hue-rotate(var(--hue-rotate-angle));
 }
 
@@ -754,13 +747,13 @@ header p {
     margin: -80px;
     font-size: 30rem;
     text-align: center;
-    
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 15px rgb(255, 255, 255), 0px 0px 50px rgba(255, 255, 255, 0.295);
   }
 
   #super404 p {
     margin: 10px 0;
     font-weight: 100;
-    opacity: 10%;
+    opacity: 30%;
     font-size: 1rem;
   }
 
@@ -786,7 +779,6 @@ header p {
     background-color: rgba(13, 13, 13, 0.3);
     border: 1px solid #ffffff10;
     box-shadow: 0px 0px 0px #e6e6e6;
-    backdrop-filter: blur(25px);
 }
 
 @media (max-width: 1060px) {
