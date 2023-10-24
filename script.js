@@ -42,44 +42,46 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 
 // Ad Block Detect
-document.addEventListener('DOMContentLoaded', function () {
+
     const detect = document.querySelector("#detect");
     const wrapper = document.querySelector(".wrapper");
+    const button = wrapper.querySelector("button");
 
-    console.log("Detection started...");
+    let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
+    for (let item of adClasses) {
+    detect.classList.add(item);
+    }
+    let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
 
-    const adBlockDetectionElement = document.createElement('div');
-    adBlockDetectionElement.className = 'ad-block-detection-element';
-    adBlockDetectionElement.style.height = '1px'; // An invisible element that ad-blockers usually remove
+    console.log("Checking for ad classes:", adClasses);
+    console.log("Property value of 'detect' element:", getProperty);
 
-    // Append the adBlockDetectionElement after the DOM has loaded
-    document.body.appendChild(adBlockDetectionElement);
-
-    // Check if the ad-blocker detection element is hidden by an ad-blocker
-    if (adBlockDetectionElement.offsetHeight === 0) {
-        // Ad-blocker detected
-        console.log("Ad-blocker detected.");
-        detect.style.display = 'block';
-        wrapper.style.display = 'block';
-    } else {
-        console.log("No ad-blocker detected.");
+    if (!wrapper.classList.contains("show")) {
+    getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
     }
 
-    // Function to hide both #detect and .wrapper
-    function hideDetection() {
-        detect.style.display = 'none';
-        wrapper.style.display = 'none';
-    }
+    button.addEventListener("click", () => {
+    wrapper.classList.remove("show");
+    });
 
-    // Initially, hide #detect and .wrapper
-    hideDetection();
+    // Check for ad blocker
+    const hasAdblocker = getProperty == "none" ? "Yes" : "No";
+    console.log("Is there an ad blocker: " + hasAdblocker);
 
-    // You can add an event listener to a button inside your .wrapper to hide the elements when the user clicks the button.
-    // Example:
-    const closeButton = wrapper.querySelector("#refreshButton");
-    if (closeButton) {
-        closeButton.addEventListener("click", hideDetection);
-    }
-});
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+
+var video = document.getElementById("videoBG");
+
+function removeControls() {
+  if (window.innerWidth < 768) { // Adjust the screen width as needed
+    video.removeAttribute("controls");
+  } else {
+    video.setAttribute("controls", "true");
+  }
+}
+
+// Call the function on page load and when the window is resized
+window.addEventListener("load", removeControls);
+window.addEventListener("resize", removeControls);
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------

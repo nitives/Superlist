@@ -42,7 +42,7 @@ body {
 /* -------------------------------------------------------------------------------------- */
 
 #videoBG {
-    overflow: hidden;
+    height: 30%;
     top: -1px;
     display: block;
     height: auto;
@@ -57,10 +57,6 @@ body {
     
     opacity: 0%;
     filter: blur(0px);
-}
-
-#video-st {
-    filter: invert(0);
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -620,11 +616,12 @@ footer a{
     
     opacity: var(--background-brightness);
     filter: blur(0px);
+    filter: grayscale()
 }
 
 /* ----------Hue of site---------- */
 
- .dark-mode #videoBG, .main-header .logo, nav h2, a {
+ .main-header .logo, nav h2, a {
     filter: hue-rotate(var(--hue-rotate-angle));
 }
 
@@ -777,13 +774,13 @@ header p {
     margin: -80px;
     font-size: 30rem;
     text-align: center;
-    
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 15px rgb(255, 255, 255), 0px 0px 50px rgba(255, 255, 255, 0.295);
   }
 
   #super404 p {
     margin: 10px 0;
     font-weight: 100;
-    opacity: 10%;
+    opacity: 30%;
     font-size: 1rem;
   }
 
@@ -809,7 +806,6 @@ header p {
     background-color: rgba(13, 13, 13, 0.3);
     border: 1px solid #ffffff10;
     box-shadow: 0px 0px 0px #e6e6e6;
-    backdrop-filter: blur(25px);
 }
 
 @media (max-width: 1060px) {
