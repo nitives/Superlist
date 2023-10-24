@@ -16,7 +16,7 @@
 --accent: #6e4596;
 --background-brightness: 50%;
 --hue-rotate-angle: 0deg; 
---wrap-o: 1;
+--wrap-o: 0;
 }
 
 ::selection {
@@ -300,7 +300,7 @@ div li {
 
 @media screen and (max-width: 900px) {
     .main-header {
-        padding: 10px;
+        padding: 20px;
         width: calc(100% - 10px );
         height: calc(20% - 30px );
         left: 0px;
@@ -356,6 +356,13 @@ main {
     margin-right: auto;
     margin-left: auto;
     padding: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        position: relative;
+        top: 30px;
+    }
 }
 
 section {
