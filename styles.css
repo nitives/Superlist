@@ -16,7 +16,7 @@
 --accent: #6e4596;
 --background-brightness: 50%;
 --hue-rotate-angle: 0deg; 
---wrap-o: 1;
+--wrap-o: 0;
 }
 
 ::selection {
