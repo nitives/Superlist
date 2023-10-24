@@ -300,7 +300,7 @@ div li {
 
 @media screen and (max-width: 900px) {
     .main-header {
-        padding: 20px;
+        padding-block: 10px;
         width: calc(100% - 10px );
         height: calc(20% - 30px );
         left: 0px;
@@ -310,6 +310,12 @@ div li {
     header .emoji {
         position: relative;
         top: -10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-header {
+        padding-block: 90px;
     }
 }
 /* -------------------------------------------------------------------------------------- */
