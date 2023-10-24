@@ -215,6 +215,7 @@ header img {
     height: 27px;
     position: relative;
     top: 4px;
+    filter: grayscale();
 }
 
 header .emoji {
