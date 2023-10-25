@@ -41,7 +41,7 @@
     color: #eee;
     letter-spacing: -30px;
     left: -30px;
-    margin-top: -50px;
+    margin-top: -5foot0px;
 }
 
 #construct p {
@@ -575,19 +575,19 @@ i b {
 
 
 footer {
-  position: absolute; /* Use static position to keep the footer at the bottom */
-  bottom: 0;
-  left: 0;
-  right: 0; /* Set both left and right to 0 to center the footer horizontally */
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #e6e6e6;
-  margin: 20px;
-  background-color: var(--secondary);
-  color: #3a3a3a;
-  gap: 100px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Set both left and right to 0 to center the footer horizontally */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    margin: 20px;
+    background-color: var(--secondary);
+    color: #3a3a3a;
+    gap: 100px;
 }
 
 
