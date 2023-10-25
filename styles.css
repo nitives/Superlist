@@ -6,6 +6,63 @@
     box-sizing: border-box;
 }
 
+#constructscale {
+    width: auto;
+    height: 100px;
+}
+
+#construct {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    padding-inline: 100px;
+    gap: 10px;
+    background-color: #0e71b3;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 0px #e6e6e6;
+    color: rgba(255, 255, 255, 0.2); /* Color Of Pattern */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dark-mode #construct {
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+#construct h1 {
+    position: relative;
+    font-size: 20rem;
+    color: #eee;
+    letter-spacing: -30px;
+    left: -30px;
+    margin-top: -50px;
+}
+
+#construct p {
+    color: #eee;
+    font-size: 1.5rem;
+    opacity: 70%;
+}
+
+#construct .construct-text {
+    margin-top: -50px;
+}
+
+#construct .construct-mini-text {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    opacity: 30%;
+    font-size: 1rem;
+}
+
+
+
 /* ------------------------------- */
 
 :root {
@@ -39,6 +96,8 @@ body {
 }
 
 
+
+
 /* -------------------------------------------------------------------------------------- */
 
 #videoBG {
@@ -68,6 +127,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 
 /* -------------------------------------------------------------------------------------- */
 
@@ -515,7 +575,7 @@ i b {
 
 
 footer {
-  position: fixed; /* Use fixed position to keep the footer at the bottom */
+  position: absolute; /* Use static position to keep the footer at the bottom */
   bottom: 0;
   left: 0;
   right: 0; /* Set both left and right to 0 to center the footer horizontally */
@@ -580,6 +640,52 @@ footer a{
 
 
 /* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Downloader */
+
+.downloader {
+    border-radius: 20px;
+    padding: 100px;
+    gap: 10px;
+    background: var(--secondary);
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 10px #e6e6e6;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.downloader .link {
+    padding: 10px;
+    padding-inline: 20px;
+    border-radius: 20px;
+}
+
+.downloader select {
+    padding: 10px;
+    padding-inline: 10px;
+    border-radius: 20px;
+}
+
+.downloader .link::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .downloader {
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 
 /* Dark Mode */
 .dark-mode {
@@ -655,7 +761,6 @@ header p {
     background-color: rgba(13, 13, 13, 0.3);
     border: 1px solid #ffffff10;
     box-shadow: 0px 0px 0px #e6e6e6;
-    backdrop-filter: blur(25px);
 }
 
 .dark-mode section i {
