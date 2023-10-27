@@ -572,12 +572,7 @@ i b {
 
 /* --------------------------------------------- */
 
-
 footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0; /* Set both left and right to 0 to center the footer horizontally */
     display: flex;
     justify-content: center;
     padding: 10px;
