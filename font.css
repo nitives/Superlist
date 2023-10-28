@@ -1,13 +1,4 @@
 @font-face {
-	font-family: 'ABCDiatype';
-	font-style: normal;
-	font-display: swap;
-	src: url('./fonts/ABCDiatype-Regular.otf') format("opentype");
-}
-
-@font-face {
-	font-family: 'ABCDiatype';
-	font-style: bold;
-	font-display: swap;
-	src: url('./fonts/ABCDiatype-Bold.otf') format("opentype");
+	font-family: 'ABCDiatypeVariable';
+	src: url('./fonts/ABCDiatypeVariable.ttf') format("truetype");
 }

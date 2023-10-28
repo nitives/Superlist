@@ -15,7 +15,7 @@
 /* ------------------------------- */
 
 :root {
---font: "ABCDiatype";
+--font: "ABCDiatypeVariable"; 
 --fw-normal: 300;
 --fw-bold: 500;
 --fw-black: 700;
@@ -110,12 +110,17 @@ a {
     font-size: var(--a);
 }
 
+li img {
+    font-weight: var(--fw-bold);
+    font-size: var(--a);
+}
+
 
 
 body {
     background-color: var(--bg);
     color: var(--body);
-    font-family: var(--font);
+    font-family: var(--font); 
     font-size: var(--p-medium);
     font-feature-settings: "ss12";
 
@@ -536,14 +541,15 @@ nav div {
     border: 1px solid #e6e6e6;
     background: #f0f0f0;
     display: flex;
-    width: 183px;
+    width: 200px;
     height: auto;
-    padding: 15px 0px 15px 15px;
+    padding: 15px 15px 15px 15px;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
     flex-shrink: 0;
     z-index: -1;
+    
 }
 
 /* Hide the navigation on screens with a maximum width of 767px (typical for mobile devices) */
