@@ -408,7 +408,7 @@ div li {
     .main-header {
         padding-block: 10px;
         width: calc(100% - 10px );
-        height: 150px;
+
         left: 0px;
         left: 6px;
         top: -8px;
@@ -421,7 +421,7 @@ div li {
 
 @media screen and (max-width: 500px) {
     .main-header {
-        padding-block: 50px;
+        padding-block: 27px;
     }
 }
 /* -------------------------------------------------------------------------------------- */
