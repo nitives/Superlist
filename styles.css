@@ -84,11 +84,13 @@ h1 {
 }
 
 h2 {
+    letter-spacing: -1px;
     font-size: var(--h2);
     margin-bottom: -20px;
 }
 
 h3 {
+    letter-spacing: -1px;
     margin-bottom: 12px;
     font-size: var(--h3);
 }
@@ -405,7 +407,7 @@ div li {
     .main-header {
         padding-block: 10px;
         width: calc(100% - 10px );
-        height: calc(20% - 28px );
+        height: calc(20% - 86px );
         left: 0px;
         left: 6px;
         top: -8px;
