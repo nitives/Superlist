@@ -30,7 +30,7 @@
 --wrap-o: 0;
 }
 
-:root {
+:root { /* Moblie Screen */
     --h1: 2rem;
     --h2: 1.75rem;
     --h3: 1.5rem;
@@ -45,7 +45,7 @@
     --p-small: .875rem;
     --fine-print: .75rem;
     --huge: 6rem
-    }
+}
 
 @media (max-width: 580px) { /* Normal Screen */
     :root {
@@ -55,6 +55,7 @@
     --h4: 1.5rem;
     --h5: 1.25rem;
     --h6: 1.05rem;
+    --b: .9rem;
     --p: 1rem;
     --p-large: 1.125rem;
     --p-medium: 1rem;
