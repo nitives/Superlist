@@ -160,6 +160,15 @@ a, li, ul {
     filter: invert(0);
 }
 
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
+}
+
 /* -------------------------------------------------------------------------------------- */
 
 html {

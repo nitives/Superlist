@@ -144,3 +144,9 @@ function downloadVideo() {
         console.log("Error: No URL provided");
     }
 }
+
+video=getElementsByTagName('video');
+function removeControls(video){
+  video.removeAttribute('controls');
+}
+window.onload=removeControls(video);
