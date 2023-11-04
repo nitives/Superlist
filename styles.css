@@ -94,6 +94,7 @@ h3 {
 }
 
 h4 {
+    margin-bottom: 12px;
     font-size: var(--h4);
 }
 
@@ -404,7 +405,7 @@ div li {
     .main-header {
         padding-block: 10px;
         width: calc(100% - 10px );
-        height: calc(20% - 30px );
+        height: calc(20% - 28px );
         left: 0px;
         left: 6px;
         top: -8px;
