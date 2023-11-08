@@ -1,0 +1,1 @@
+class="transform transition duration-700 hover:scale-105 hover:bg-blue-600"

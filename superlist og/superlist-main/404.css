@@ -1,0 +1,828 @@
+/* Debug "outline: 1px solid red;" */
+/* 370 x 1050 - iPhone 13 mini */
+
+* {
+    outline: 0px solid rgba(255, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+/* ------------------------------- */
+
+:root {
+--text: #050505;
+--background: #fafafa;
+--primary: #6c1fe0;
+--secondary: #f0f0f0;
+--accent: #6e4596;
+--background-brightness: 50%;
+--hue-rotate-angle: 0deg; 
+--wrap-o: 1;
+}
+
+::selection {
+    color: #f0f0f0;
+    background: var(--primary);
+  }
+
+html, body {
+    min-height: 100%;
+}
+
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    font-family: Inter, sans-serif;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+#videoBG {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh; /* Set the video's height to 100% of the viewport height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+/* -------------------------------------------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+#detect {
+    position: fixed;
+    z-index: 299;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: var(--wrap-o);
+
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    backdrop-filter: blur(25px);
+    pointer-events: none;
+}
+
+.wrapper {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+    width: 443px;
+    height: 273px;
+    padding: 10px 30px;
+    gap: 10px;
+    opacity: var(--wrap-o);
+
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    border-radius: 20px;
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+#detect.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform:translate(-50%, -50%) scale(1);
+}
+
+.wrapper.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform:translate(-50%, -50%) scale(1);
+}
+
+.wrapper h2 {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    width: 39px;
+    height: 117px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.wrapper p {
+    text-align: center;
+    display: flex;
+    height: 59px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: stretch;
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.wrapper button {
+    margin: auto;
+    display: flex;
+    width: 90px;
+    height: 36px;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: var(--secondary);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(13, 13, 13, 0.80);
+}
+
+.wrapper button:hover {
+    background: rgba(255, 255, 255, 0.1)
+}
+
+.wrapper button:active {
+    background: rgba(255, 255, 255, 0.2)
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+.main-header {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 60px;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+
+    border-radius: 20px;
+    border: 1px solid #202020;
+    background: var(--secondary);
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 10px #e6e6e6;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+header p {
+    text-align: center;
+}
+
+header .hero-button {
+    position: relative;
+    top: 2px;
+}
+
+/* --------------------------------------------- */
+
+header img {
+    width: 199px;
+    height: 27px;
+    position: relative;
+    top: 4px;
+    filter: grayscale();
+}
+
+header .emoji {
+    position: relative;
+    top: 0px;
+}
+
+/* --------------------------------------------- */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials img {
+    width: 24px;
+}
+
+.socials button {
+    position: relative;
+    top: 2.1px;
+    right: 6px;
+}
+
+div li {
+    list-style-type: none; /* Remove bullets */
+  }
+
+/* ----------------------- */
+
+  @media screen and (max-width: 900px) {
+.socials {
+    position: relative;
+    bottom: 12px;
+    left: 1px;
+}
+}
+
+@media screen and (max-width: 900px) {
+.socials .hero-button {
+    position: relative;
+    top: -1px;
+}
+}
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        text-align: center;
+        gap: 1px;
+    }
+    
+    header img {
+        width: calc(199px * 0.8);
+        height: calc(27px * 0.8);
+        margin-bottom: -10px;
+    }
+
+    header p {
+        font-size: 14px;
+        position: relative;
+        bottom: 3px;
+    }
+
+    header p img {
+        position: relative;
+        bottom: 10px;
+    }
+  }
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    .main-header {
+        padding: 10px;
+        width: calc(100% - 10px );
+        height: calc(20% - 30px );
+        left: 0px;
+        left: 6px;
+        top: -8px;
+    }
+    header .emoji {
+        position: relative;
+        top: -10px;
+    }
+}
+/* -------------------------------------------------------------------------------------- */
+
+/* Apply styles to the <hr>/the divider element */
+
+hr {
+    border-color: #d1d1d1; /* Color of the line */
+    border-radius: 15px;
+    border-width: 1px;  /* Width of the line */
+    border-style: solid; /* Style of the line (e.g., solid, dashed, etc.) */
+    margin: 15px 0;     /* Adjust the margin as needed for spacing */
+}
+
+
+discord-embed {
+    position: relative; /* or absolute or fixed */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1; /* Adjust as needed */
+}
+
+button#dark-mode-toggle {
+    margin-top: -100px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+#dark-icon {
+    filter: invert(0);
+    width: 24px;
+    height: auto;
+    transition: transform 0.3s ease; /* Add this line for a smooth transition */
+}
+
+
+main {
+    max-width: 1200px;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: var(--secondary);
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 10px #e6e6e6;
+    padding: 20px 20px 20px 20px;
+    gap: 10px;
+}
+
+section i {
+    color: var(--text);
+}
+
+section .h2-space {
+    margin-top: 30px;
+}
+
+section .p-space {
+    margin-top: -15px;
+    font-weight: 500;
+}
+
+/* --------------------------------------------- */
+
+/* Pandabuy Page */
+
+.dark-mode .section-pandabuy {
+  margin: auto; /* center */
+  width: 10px;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 183px;
+    left: 77px;
+    right: 0px;
+    width: 183px;
+    height: 500px;
+    padding-top: 1px;
+    flex-direction: column;
+    margin: 30px;
+    align-items: flex-start;
+    gap: 14.5px;
+    flex-shrink: 0;
+    z-index: 8;
+}
+
+nav h2 { /* Nav Title Color */
+    color: var(--primary);
+    display: flex;
+    width: 163px;
+    height: 40px;
+    padding: 0px 0px 0px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.5px;
+    flex-shrink: 0;
+}
+
+nav a { /* Nav Links Colors */
+    color: #050505;
+}
+
+nav div {
+    color: #050505;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    background: #f0f0f0;
+    display: flex;
+    width: 183px;
+    height: auto;
+    padding: 15px 0px 15px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex-shrink: 0;
+    z-index: -1;
+}
+
+/* Hide the navigation on screens with a maximum width of 767px (typical for mobile devices) */
+@media screen and (max-width: 1843px) {
+    nav {
+      display: none;
+    }
+  }
+
+
+/* -------------------------------------------------------------------------------------- */
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: -20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0px;
+}
+
+a { /* Links */
+    margin-bottom: 0px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+p { /* Descriptions */
+    color: #242424;
+    font-weight: 600;
+}
+
+/* --------------------------------------------- */
+
+i b {
+    display: flex;
+    position: relative;
+    opacity: 20%;
+    box-shadow: #eeeeee;
+    bottom: 11px;
+    margin-top: -400px;
+}
+
+.glow {
+    color: #fff;
+    filter: drop-shadow(0px 0px 10px #ffffff);
+  }
+
+/* --------------------------------------------- */
+
+
+footer {
+  position: fixed; /* Use fixed position to keep the footer at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0; /* Set both left and right to 0 to center the footer horizontally */
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  margin: 20px;
+  background-color: var(--secondary);
+  color: #3a3a3a;
+  gap: 100px;
+}
+
+
+footer a{
+    font-weight: 100;
+    color: #000000;
+}
+
+.emoji {
+    display: flex;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.15em;
+  }
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+    footer {
+        margin: 5px;
+    }
+}
+
+/* --------------------------------------------- */
+
+@media screen and (max-width: 550px) {
+    footer {
+        gap: 90px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    footer {
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    footer {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer {
+        gap: 1px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #020104; /* Old - #050505; */
+    color: #fff;
+}
+
+.dark-mode #dark-icon {
+    filter: invert(1);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* ----------Video Dark Mode---------- */
+
+.dark-mode #videoBG {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    outline: none; /* Remove the outline when the video is focused */
+    border: none; /* Remove any border */
+    background: transparent; /* Make sure the background is transparent */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity */
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    
+    opacity: var(--background-brightness);
+    filter: blur(0px);
+    filter: grayscale()
+}
+
+/* ----------Hue of site---------- */
+
+ .main-header .logo, nav h2, a {
+    filter: hue-rotate(var(--hue-rotate-angle));
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.dark-mode .main-header {
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.5), transparent);
+    background-color: rgba(13, 13, 13, 0.3);
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+header p {
+    color: var(--text);
+}
+
+/* --------------------------------------------- */
+
+.dark-mode .socials img {
+    filter: invert(1)
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.dark-mode a {
+    color: var(--primary);
+}
+
+
+.dark-mode p {
+    color: #b9b9b9;
+}
+
+
+.dark-mode section {
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+    backdrop-filter: blur(25px);
+}
+
+.dark-mode section i {
+    color: var(--secondary)
+}
+
+.dark-mode section h3 {
+    color: #eeeeee
+}
+
+.dark-mode section li {
+    color: #a1a1a1;
+}
+
+.dark-mode hr {
+    border-color: hsla(0, 0%, 13%, 0.5); /* Color of the dividers in dark mode */
+}
+
+.dark-mode h2 {
+    color: #eee;
+}
+
+.dark-mode footer {
+    border: 1px solid #ffffff10;
+    background-color: rgba(13, 13, 13, 0.8);
+    color: #3a3a3a;
+}
+
+.dark-mode footer a{
+    font-weight: 100;
+    color: #3a3a3a;
+}
+
+.dark-mode i b { 
+    display: flex;
+    position: relative;
+    opacity: 20%;
+    box-shadow: #eeeeee;
+    bottom: 11px;
+    margin-top: 0px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+
+.dark-mode nav h2 {
+    color: #fff;
+}
+
+.dark-mode nav div {
+    background: #0D0D0D;
+    border: 1px solid #ffffff10;
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    backdrop-filter: blur(25px);
+}
+
+.dark-mode nav a { /* Nav Links Colors */
+    color: #e9e9e9;
+    letter-spacing: 0.px
+
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Dark Scroll Bar */
+
+::-webkit-scrollbar,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+    background: black !important; /* Background Scroll Bar Color */
+    width: 10px;
+  }
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-button {
+    display: none !important;
+  }
+::-webkit-scrollbar-thumb,
+ ::-webkit-scrollbar-thumb {
+    background: #0c0c0c !important; /* Scroll Bar Color */
+    width: 8px !important;
+    border-radius: 10px;
+    transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:not(:active):hover,
+ ::-webkit-scrollbar-thumb:not(:active):hover {
+    background: #181818 !important;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:hover:active,
+ ::-webkit-scrollbar-thumb:active,
+ ::-webkit-scrollbar-thumb:hover:active {
+    background: #202020 !important;
+     transition: .1s !important;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------- */
+
+  #super404scale {
+    width: auto;
+    height: 100px;
+  }
+
+  #super404 h1 {
+    margin: -80px;
+    font-size: 30rem;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 15px rgb(255, 255, 255), 0px 0px 50px rgba(255, 255, 255, 0.295);
+  }
+
+  #super404 p {
+    margin: 10px 0;
+    font-weight: 100;
+    opacity: 30%;
+    font-size: 1rem;
+  }
+
+  #super404 {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    padding-inline: 100px;
+    gap: 10px;
+    background: var(--secondary);
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 10px #e6e6e6;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .dark-mode #super404 {
+    color: #eeeeee;
+    background-color: rgba(13, 13, 13, 0.3);
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+@media (max-width: 1060px) {
+  #super404 {
+    padding: 50px; /* Adjust padding for smaller screens */
+  }
+
+  #super404 h1 {
+    margin: -10px;
+    font-size: 10rem; /* Adjust font size for smaller screens */
+  }
+
+  #super404 p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 420px) {
+  #super404 {
+    padding: 40px; /* Adjust padding for smaller screens */
+  }
+
+  #super404 h1 {
+    margin: -20px;
+    font-size: 10rem; /* Adjust font size for smaller screens */
+  }
+
+  #super404 p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 380px) {
+  #super404 {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  #super404 h1 {
+    margin: 0px;
+    font-size: 7rem; /* Adjust font size for smaller screens */
+  }
+
+  #super404 p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+

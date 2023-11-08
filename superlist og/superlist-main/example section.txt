@@ -1,0 +1,13 @@
+<section>
+            <h2>Pirate</h2> <!--Name-->
+            <p>Description</p> <!--Description-->
+            <ul id="links-list">
+                <li>
+                    <a href="https://4mirrorlink.com">4MirrorLink</a>
+                </li>
+                <li>
+                    <a href="http://www.4download.net">4Download</a>
+                </li>
+            </ul>
+        </section>
+        <hr> <!--Divider-->

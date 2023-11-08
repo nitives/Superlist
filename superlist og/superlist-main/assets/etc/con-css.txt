@@ -1,0 +1,54 @@
+#constructscale {
+    width: auto;
+    height: 100px;
+}
+
+#construct {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    padding-inline: 100px;
+    gap: 10px;
+    background-color: #0e71b3;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 0px 0px #e6e6e6;
+    color: rgba(255, 255, 255, 0.2); /* Color Of Pattern */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dark-mode #construct {
+    border: 1px solid #ffffff10;
+    box-shadow: 0px 0px 0px #e6e6e6;
+}
+
+#construct h1 {
+    position: relative;
+    font-size: 20rem;
+    color: #eee;
+    letter-spacing: -30px;
+    left: -30px;
+    margin-top: -5foot0px;
+}
+
+#construct p {
+    color: #eee;
+    font-size: 1.5rem;
+    opacity: 70%;
+}
+
+#construct .construct-text {
+    margin-top: -50px;
+}
+
+#construct .construct-mini-text {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    opacity: 30%;
+    font-size: 1rem;
+}

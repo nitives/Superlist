@@ -1,0 +1,11 @@
+{
+    "breadcrumbs.enabled": true,
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "onHover",
+    "editor.inlineSuggest.suppressSuggestions": false,
+    "editor.cursorBlinking": "blink",
+    "diffEditor.codeLens": false,
+    "emmet.showAbbreviationSuggestions": true,
+    "html-css-class-completion.enableEmmetSupport": true
+}

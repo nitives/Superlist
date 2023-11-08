@@ -1,0 +1,19 @@
+OG Colors -
+
+Light Mode
+
+background - #fafafa
+sections - #f0f0f0
+link colors - #6c1fe0
+top bar - #0d0d0d
+description - #242424
+divider - #d1d1d1
+
+Dark Mode
+
+background - #050505
+sections - #0d0d0d
+link colors - #6c1fe0
+top bar - gradient with #0d0d0d, #050505
+description - #b9b9b9
+divider - #1a1a1a
