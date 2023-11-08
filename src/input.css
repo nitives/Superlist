@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'ABCDiatypeVariable';
+	src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
+}
+
+.rainbow-text {
+	content: "";
+	background-image: repeating-linear-gradient(90deg, #5f43ff, #f6f5fd, #5f43ff);
+	text-align: center;
+	background-size: 800% 800%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbow 10s ease infinite;
+	color: transparent;
+  }
+  
+  @keyframes rainbow { 
+	  0%{background-position:0% 50%}
+	  50%{background-position:100% 25%}
+	  100%{background-position:0% 50%}
+  }
+
+  
