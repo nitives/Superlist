@@ -13,6 +13,7 @@ module.exports = {
         'transparent': 'transparent',
         'n-text': '#0b081c',
         'n-background': '#edebfa',
+        'n-container': '#dddbeb',
         'n-primary': '#7463d4',
         'n-secondary': {
           '50': '#f6f5fd',
@@ -28,9 +29,11 @@ module.exports = {
           '950': '#302154',
       },
         'n-accent': '#3f2da4',
+        'n-high': '#39F782',
   
         'n-dark-text': '#e6e3f7',
         'n-dark-background': '#070514',
+        'n-dark-container': '#120f26',
         'n-dark-primary': '#3c2b9c',
         'n-dark-secondary': '#1d154c',
         'n-dark-accent': '#6d5bd2',
