@@ -7,19 +7,19 @@
 	src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
 }
 
-.shiny-text {
+.rainbow-text {
 	content: "";
 	background-image: repeating-linear-gradient(120deg, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #fff, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4);
 	text-align: center;
 	background-size: 350% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: shiny 4s ease infinite;
+	animation: rainbow 4s ease infinite;
 	animation-direction: normal;
 	color: transparent;
   }
   
-  @keyframes shiny { 
+  @keyframes rainbow { 
     0% { background-position: 100% 25% }
 	100% { background-position: 0% 50% }
   }
