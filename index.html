@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="font-abc h-full scroll-smooth bg-n-background dark:bg-n-dark-background antialiased" lang="en">
+<html class="font-abc h-full scroll-smooth bg-n-background dark:bg-n-dark-background antialiased " lang="en">
 <link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,8 @@
     <title>Superlist</title>
 </head>
 <body class="bg-n-background dark:bg-n-dark-background text-n-text dark:text-n-dark-text antialiased flex h-full flex-col">
+  
+  <style> ::selection {background: #7463d4;} </style>
   <header class="z-50 w-full">
     <nav class="mx-auto flex max-w-7xl items-center justify-center p-5 lg:px-8"> <!--Header-->
       <div class="relative flex items-center">
@@ -33,8 +35,8 @@
             <span class="text-base font-semibold">Superlist OG</span>
           </a>
           <a class="pl-5 items-center flex gap-[1.7]">
-            <span class="font-bold text-xl">The <i class="pr-[3px] rainbow-text">New!</i> Ultimate List of the Internet</span>
-            <img draggable="false" class="relative h-7" src="/assets/icons/sparkles.webp">
+            <span class="font-bold text-xl">The <i class="pr-[3px] shiny-text">New!</i> Ultimate List of the Internet</span>
+            <img draggable="false" class="relative h-7" src="assets/icons/sparkles.webp" alt="a animated sparkles emoji">
           </a>
         </div>
         <div class="flex justify-center items-center gap-3"> <!--Header Social Links-->
@@ -60,13 +62,14 @@
   <main>
     <div class="p-10">
       <div class="w-full grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"> <!--Grid Container-->
-        <a href="https://superlist.cc" target="_blank" class="bg-n-dark-background/50 dark:bg-n-background relative flex w-full p-3 sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-xl hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+
+        <a href="https://superlist.cc" target="_blank" class="bg-n-dark-background/0 dark:bg-n-background relative flex w-full p-3 sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-xl hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
           <div class="items-center">
-            <img src="https://superlist.cc/assets/background/poster.png" class="rounded-xl mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer">
-            <span class="text-n-text font-bold text-xl mt-28">Superlist</span>
-            <span class="text-n-text font-bold text-xl mt-28">Superlist</span>
+            <img src="/assets/site-captures/superlist_cc.png" class="rounded-xl mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
+            <span class="text-n-dark-text dark:text-n-text font-bold text-xl">Superlist</span>
           </div>
         </a>
+
       </div>
     </div>
   </main>
