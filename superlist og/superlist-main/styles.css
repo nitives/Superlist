@@ -167,6 +167,7 @@ b {
 }
 
 a {
+    color: var(--primary);
     font-weight: var(--fw-bold);
     font-size: var(--a);
 }
