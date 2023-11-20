@@ -795,6 +795,10 @@ video {
   width: 63px;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1552,6 +1556,30 @@ video {
 
   .lg\:w-\[200px\] {
     width: 200px;
+  }
+
+  .lg\:w-1 {
+    width: 0.25rem;
+  }
+
+  .lg\:w-80 {
+    width: 20rem;
+  }
+
+  .lg\:w-40 {
+    width: 10rem;
+  }
+
+  .lg\:w-36 {
+    width: 9rem;
+  }
+
+  .lg\:w-3 {
+    width: 0.75rem;
+  }
+
+  .lg\:w-32 {
+    width: 8rem;
   }
 
   .lg\:grid-cols-3 {
