@@ -2,3 +2,8 @@
 	font-family: 'ABCDiatypeVariable';
 	src: url('./fonts/ABCDiatypeVariable.ttf') format("truetype");
 }
+
+@font-face {
+	font-family: 'DeterminationSansWeb';
+	src: url('./assets/fonts/DeterminationSansWeb.woff') format("truetype");
+}

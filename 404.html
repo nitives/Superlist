@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="font-abc h-full scroll-smooth bg-black antialiased " lang="en">
+<html class="font-abc h-full scroll-smooth bg-black" lang="en">
 <link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,14 @@
     <meta name="theme-color" content="#7463d4"> 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="/font.css">
     <link rel="icon" href="/assets/logo/favicon-white.ico" type="image/ico">
     <link rel="apple-touch-icon" href="/assets/logo/apple_superlist.png">
     <link href="dist/pattern.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Superlist</title>
 </head>
-<body class="bg-black text-white antialiased flex h-full flex-col z-0">
+<body class="bg-black text-white flex h-full flex-col z-0">
     <style> ::selection {background: #7463d4;} </style>
     <header class="z-50 w-full">
       <nav class="mx-auto flex max-w-7xl items-center justify-center p-5 lg:px-8 "> <!--Header-->
@@ -34,7 +34,7 @@
               <span class="text-base font-semibold">Superlist OG</span>
             </a>
             <a class="pl-5 items-center gap-[1.7] lg:flex hidden">
-              <span class="font-bold text-xl">The <i class="pr-[3px] rainbow-text">New!</i> Ultimate List of the Internet</span>
+              <span class="font-undertale tracking-wider font-bold text-xl">The <i class="pr-[3px] rainbow-text">New!</i> Ultimate List of the Internet</span>
               <img draggable="false" class="relative h-7" src="/assets/icons/sparkles.webp" alt="a animated sparkles emoji">
             </a>
           </div>
@@ -68,17 +68,13 @@
   
     </header>
     <main>
-        <section class="pt-[120px]">
-            <div class="relative z-10 py-4 px-4 mx-auto max-w-screen-sm lg:py-8 lg:px-6 rounded-[50px]">
-                <div class="mx-auto text-center">
-                    <h1 class="text-white text-7xl tracking-tight font-extrabold lg:text-9xl">404</h1>
-                    <p class="text-white text-3xl tracking-tight font-bold md:text-4xl">Ermmm.</p>
-                    <p class="text-white text-lg font-light pt-4">Sorry, we can't find that page. You'll find lots to explore on the home page. </p>
-                    <a href="/dist/index.html" class="inline-flex text-white bg-n-secondary hover:bg-n-secondary-800/20 focus:ring-4 focus:outline-none focus:ring-n-secondary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-n-secondary-600 dark:focus:ring-[2px] my-4">Let's go back home</a>
-                </div>   
-            </div>
+        <section class="relative pt-[10px]">
+          <img class="z-10 relative mx-auto" src="/assets/etc/404superlist_undertale.gif">
+          <a href="/dist/index.html" class="flex items-center justify-center">
+            <img class="z-10 relative lg:w-[120px] w-[60px]" src="/assets/etc/undertale_home.png"></img>
+          </a>
+          <img class="w-[400px] lg:w-[200px] bottom-[70px] lg:bottom-[10px] z-0 relative mx-auto" src="/assets/etc/sans-sleep.gif">
         </section>
-        <img class="z-0 bottom-[120px] relative mx-auto" src="/assets/etc/sans-sleep.gif">
     </main>
   </body>
   </html>

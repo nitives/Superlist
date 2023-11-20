@@ -40,6 +40,7 @@ module.exports = {
       },
       fontFamily: {
         'abc': ['ABCDiatypeVariable'],
+        'undertale': ['DeterminationSansWeb'],
       },
     },
   }
