@@ -167,6 +167,7 @@ b {
 }
 
 a {
+    color: var(--primary);
     font-weight: var(--fw-bold);
     font-size: var(--a);
 }
@@ -636,10 +637,10 @@ nav div {
 i b {
     display: flex;
     position: relative;
-    opacity: 20%;
+    opacity: 0%;
     box-shadow: #eeeeee;
     bottom: 11px;
-    margin-top: -400px;
+    margin-top: -46px;
 }
 
 .glow {
