@@ -563,6 +563,22 @@ video {
   top: 0px;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.right-48 {
+  right: 12rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -694,6 +710,10 @@ video {
   width: max-content;
 }
 
+.w-14 {
+  width: 3.5rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -815,6 +835,11 @@ video {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-n-high {
+  --tw-border-opacity: 1;
+  border-color: rgb(57 247 130 / var(--tw-border-opacity));
 }
 
 .bg-amber-500\/10 {
@@ -1103,6 +1128,10 @@ video {
   outline-style: solid;
 }
 
+.outline-dotted {
+  outline-style: dotted;
+}
+
 .outline-1 {
   outline-width: 1px;
 }
@@ -1296,6 +1325,30 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
 }
 
+.focus\:w-7:focus {
+  width: 1.75rem;
+}
+
+.focus\:w-36:focus {
+  width: 9rem;
+}
+
+.focus\:w-72:focus {
+  width: 18rem;
+}
+
+.focus\:w-56:focus {
+  width: 14rem;
+}
+
+.focus\:w-40:focus {
+  width: 10rem;
+}
+
+.focus\:w-44:focus {
+  width: 11rem;
+}
+
 .focus\:cursor-text:focus {
   cursor: text;
 }
@@ -1303,6 +1356,15 @@ input[type="search"]::-webkit-search-results-decoration {
 .focus\:border-n-secondary-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(187 179 234 / var(--tw-border-opacity));
+}
+
+.focus\:border-n-secondary-600\/10:focus {
+  border-color: rgb(126 94 201 / 0.1);
+}
+
+.focus\:border-n-high:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(57 247 130 / var(--tw-border-opacity));
 }
 
 .focus\:pl-16:focus {
@@ -1313,9 +1375,38 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-right: 1rem;
 }
 
+.focus\:pl-\[10px\]:focus {
+  padding-left: 10px;
+}
+
+.focus\:pl-\[10p\]:focus {
+  padding-left: 10p;
+}
+
+.focus\:pl-\[\]:focus {
+  padding-left: ;
+}
+
+.focus\:pl-\[70px\]:focus {
+  padding-left: 70px;
+}
+
+.focus\:pl-\[68px\]:focus {
+  padding-left: 68px;
+}
+
 .peer:focus ~ .peer-focus\:border-n-secondary-400 {
   --tw-border-opacity: 1;
   border-color: rgb(174 161 228 / var(--tw-border-opacity));
+}
+
+.peer:focus ~ .peer-focus\:border-n-high {
+  --tw-border-opacity: 1;
+  border-color: rgb(57 247 130 / var(--tw-border-opacity));
+}
+
+.peer:focus ~ .peer-focus\:border-n-secondary-600\/10 {
+  border-color: rgb(126 94 201 / 0.1);
 }
 
 .peer:focus ~ .peer-focus\:stroke-n-secondary-500 {
