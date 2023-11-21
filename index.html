@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="font-abc h-full scroll-smooth bg-n-background dark:bg-n-dark-background antialiased " lang="en">
-<link>
+<head>
     <!-- HTML Meta Tags -->
     <title>Superlist</title>
     <meta name="description" content="The Ultimate List of the Internet, find any link for any task you might need">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HMB0LN394"></script>
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://superlist.cc">
@@ -39,6 +40,7 @@
     <link rel="apple-touch-icon" href="/assets/logo/apple_superlist.png">
     <link href="dist/pattern.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
 </head>
 <body class="bg-n-background dark:bg-n-dark-background text-n-text dark:text-n-dark-text antialiased flex h-full flex-col">
   <style> ::selection {background: #7463d4;} </style>
@@ -62,8 +64,22 @@
             <img draggable="false" class="relative h-7" src="/assets/icons/sparkles.webp" alt="a animated sparkles emoji">
           </a>
         </div>
-        <div class="lg:flex hidden justify-center items-center gap-3"> <!--Header Social Links-->
-          
+        <div class="lg:flex hidden justify-center items-center gap-3"> <!--Header Buttons-->
+
+          <form action="" class="relative mx-auto w-max">
+            <input type="search" class="ease-in-out duration-1000 peer cursor-pointer relative z-10 h-12 w-12 rounded-full bg-transparent outline-none focus:w-full focus:cursor-text focus:border-n-secondary-300 focus:pl-16" />
+              <svg class="stroke-n-dark-background dark:stroke-n-background h-7 absolute inset-y-0 my-auto border-r border-transparent px-3.5 peer-focus:border-n-secondary-400 peer-focus:stroke-n-background" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg> 
+          </form>
+
+          </form>
+
+          <a class="hidden"> <!--Search-->
+            <svg class="stroke-n-dark-background dark:stroke-n-background h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>            
+          </a>
           <a target="_blank" href="https://discord.com/invite/ZfqZrefRHC"> <!--Discord-->
             <svg class="fill-n-dark-background dark:fill-n-background h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.94 18.53">
               <path class="cls-1" d="M20.28,1.55A19.74,19.74,0,0,0,15.34,0a12.14,12.14,0,0,0-.63,1.31,18.64,18.64,0,0,0-5.48,0A12.21,12.21,0,0,0,8.59,0,19.36,19.36,0,0,0,3.65,1.56,20.74,20.74,0,0,0,.1,15.42a19.76,19.76,0,0,0,6.06,3.11,15.44,15.44,0,0,0,1.3-2.14,13.36,13.36,0,0,1-2-1c.17-.13.34-.26.5-.4A14,14,0,0,0,18,15l.5.4a12.4,12.4,0,0,1-2,1,14.47,14.47,0,0,0,1.29,2.14,19.76,19.76,0,0,0,6.06-3.11A20.73,20.73,0,0,0,20.28,1.55ZM8,12.63a2.32,2.32,0,0,1-2.15-2.45A2.31,2.31,0,0,1,8,7.73a2.3,2.3,0,0,1,2.15,2.45A2.3,2.3,0,0,1,8,12.63Zm8,0a2.32,2.32,0,0,1-2.15-2.45,2.31,2.31,0,0,1,2.15-2.45,2.3,2.3,0,0,1,2.16,2.45A2.31,2.31,0,0,1,15.94,12.63Z"/></g></g></g>
@@ -94,7 +110,7 @@
       <div class="w-full grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-10 gap-3"> <!--Grid Container-->
 
         <!----------------------------->
-        <a href="https://superlist.cc" target="_blank" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+        <a href="https://superlist.cc/og" target="_blank" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
           <div class="items-center">
             <img src="/assets/logo/favicon-white.ico" class="z-10 absolute pl-3 p-3 drop-shadow-md w-1 h-1">
             <img src="/assets/site-captures/superlist_cc.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
@@ -119,6 +135,18 @@
         </a>
         <!----------------------------->
         <a id="Pirate" href="http://www.4download.net" target="_blank" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/4download_favicon.png" class="z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/4download_com.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">4Download</span>
+              <span class="bg-teal-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-teal-400 text-teal-600 ring-1 ring-inset ring-teal-700/10">Pirate</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Recommend site for VSTs and video plugins</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Pirate" href="https://softprober.com" target="_blank" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
           <div class="items-center">
             <img src="/assets/site-captures/4download_favicon.png" class="z-10 absolute pl-3 p-3 drop-shadow-md">
             <img src="/assets/site-captures/4download_com.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">

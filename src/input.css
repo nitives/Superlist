@@ -7,6 +7,15 @@
 	src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
 }
 
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 .rainbow-text {
 	background-image: repeating-linear-gradient(120deg, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #fff, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4, #7463d4);
 	text-align: center;
@@ -55,6 +64,8 @@
 	}
 
 }
+
+
 
 
 
