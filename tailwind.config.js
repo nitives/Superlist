@@ -14,6 +14,7 @@ module.exports = {
         'n-text': '#0b081c',
         'n-background': '#edebfa',
         'n-container': '#dddbeb',
+        'n-container-hover': '#e1dff0',
         'n-primary': '#7463d4',
         'n-secondary': {
           '50': '#f6f5fd',
@@ -34,6 +35,7 @@ module.exports = {
         'n-dark-text': '#e6e3f7',
         'n-dark-background': '#070514',
         'n-dark-container': '#120f26',
+        'n-dark-container-hover': '#16112b',
         'n-dark-primary': '#3c2b9c',
         'n-dark-secondary': '#1d154c',
         'n-dark-accent': '#6d5bd2',
