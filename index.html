@@ -111,10 +111,10 @@
       <div class="w-full grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-10 gap-3"> <!--Grid Container-->
 
         <!----------------------------->
-        <a href="https://superlist.cc/og" target="_blank" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+        <a href="https://superlist.cc/og" target="_blank" class="idden bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
           <div class="items-center">
             <img src="/assets/logo/favicon-white.ico" class="z-10 absolute pl-3 p-3 drop-shadow-md w-1 h-1">
-            <img src="/assets/site-captures/superlist_cc.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
+            <img src="/assets/site-captures/Superlist_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
             <div class="flex flex-row">
               <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2 rainbow-text">Superlist</span>
               <span class="bg-indigo-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-indigo-400 text-indigo-600 ring-1 ring-inset ring-indigo-700/10 mr-1">Super</span>
@@ -123,21 +123,64 @@
           </div>
         </a>
 
-        <div id="placeholder" class="hidden bg-n-background dark:bg-n-dark-background relative w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between outline-2 outline-dashed outline-white/10" id="capture">
+        <div id="placeholder" class="hidden"> <!-- THIS SECTION IS DEDICATED TO TESTING AND CHAT GPT -->
           
-          <a id="Pirate" href="https://filecr.com/en/" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
-            <div class="items-center">
-              <img id="favicon" src="/assets/site-captures/FileCR_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
-              <img id="siteimg" src="/assets/site-captures/FileCR_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
-              <div class="flex flex-row">
-                <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">FileCR</span>
-                <span class="bg-teal-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-teal-400 text-teal-600 ring-1 ring-inset ring-teal-700/10 mr-1">Pirate</span>
-              </div>
-              <span class="text-n-text/80 dark:text-n-dark-text/80">Go-to website for any software especially Adobe products.</span>
-            </div>
-          </a>
 
-        </div>
+          <!-- The section that the user will click to open the modal -->
+          
+          <!-- Removed the href target to prevent default link behavior -->
+          <div id="clickable-box" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+            <div class="items-center">
+                <img src="/assets/logo/favicon-white.ico" class="z-10 absolute pl-3 p-3 drop-shadow-md w-1 h-1">
+                <img src="https://superlist.cc/assets/site-captures/superlist_cc.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
+              <div class="flex flex-row">
+                <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2 rainbow-text">Superlist</span>
+                <span class="bg-indigo-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-indigo-400 text-indigo-600 ring-1 ring-inset ring-indigo-700/10 mr-1">Super</span>
+              </div>
+              <span class="align-text-top text-n-text/80 dark:text-n-dark-text/80">The one and only</span>
+            </div>
+          </div>
+          
+          <!-- Modal Template (hidden by default) -->
+          <div id="modal" class="hidden z-50 fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full" onclick="closeModal()">
+            <div class="relative top-20 mx-auto p-5 w-[295px] md:w-[600px] lg:w-[1000px] shadow-lg rounded-3xl bg-n-container dark:bg-n-dark-container">
+              <div class="text-center">
+
+                <div class="hover:shadow-xl transition-all ease-in-out duration-500 hover:cursor-pointer">
+                  <a href="https://superlist.cc" target="_blank"> <!-- Site Image with Link -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="text-n-dark-text z-10 absolute w-7 h-7 left-[25px] top-[25px] md:left-[30px] md:top-[30px] lg:left-[40px] lg:top-[40px]">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                    <img src="https://superlist.cc/assets/site-captures/superlist_cc.png" class="hover:darken relative rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
+                  </a>
+                </div>
+                
+
+                <hr class="mt-3 dark:border-t-n-dark-text/10 border-t-n-text/10 border-t-4 rounded-full">
+
+                <a href="https://superlist.cc" target="_blank" class="hidden items-center px-4 py-3"> <!-- Visit Button -->
+                  <button onclick="closeModal()" class="items-center inline-flex px-3 py-2 bg-n-secondary-600 text-white text-base font-medium rounded-md shadow-sm hover:bg-n-secondary-900 focus:outline-none focus:ring-2 focus:ring-n-secondary-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pr-1 w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>                    
+                    Visit
+                  </button>
+                </a>
+
+                <div class="mt-2 px-7 py-3">
+                  <p class="text-sm text-n-text dark:text-n-dark-text/50">
+                    Here is more information about the content you clicked on. You can add more details here.
+                  </p>
+                </div>
+                <div class="items-center px-4 py-3">
+                  <button id="ModalClose" onclick="closeModal()" class="px-9 py-2 bg-n-error dark:bg-n-error-muted text-white text-base font-medium rounded-md shadow-sm hover:bg-n-error/25 dark:hover:bg-n-error-muted/25 focus:outline-none focus:ring-2 focus:ring-n-secondary-">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- THIS SECTION IS DEDICATED TO TESTING AND CHAT GPT  -->
 
         <!----------------------------->
         <a id="Pirate" href="https://filecr.com/en/" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
@@ -216,12 +259,199 @@
         <a id="Manga" id="Comics" href="https://comick.cc/home" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
           <div class="items-center">
             <img src="/assets/site-captures/Comick_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
-            <img src="/assets/site-captures/Comick_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <img src="/assets/site-captures/Comick_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" referrerpolicy="no-referrer" alt="Image of mentioned site">
             <div class="flex flex-row">
               <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">Comick</span>
               <span class="bg-pink-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-pink-400 text-pink-600 ring-1 ring-inset ring-pink-700/10 mr-1">Manga</span>
             </div>
             <span class="text-n-text/80 dark:text-n-dark-text/80">Reading manga and comics online for free</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="VFX" href="https://github.com/JargeZ/ntscqt/releases/tag/v1.5.0" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/NTSCQ_favicon.png" class="hidden rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/NTSCQ_demo.gif" class="loop relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">NTSCQ</span>
+              <span class="bg-lime-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-lime-500 text-lime-600 ring-1 ring-inset ring-lime-700/10 mr-1">VFX</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">VHS video emulator/simulator</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Dev" href="https://noclip.website" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/noclip.website_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/noclip.website_screenshot2.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">noclip.website</span>
+              <span class="bg-blue-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-blue-500 text-blue-600 ring-1 ring-inset ring-blue-700/10 mr-1">Dev</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">A open libray repository</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Books" href="https://www.annas-archive.org" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/Annas Archive_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/Annas Archive_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">Anna’s Archive</span>
+              <span class="bg-emerald-400/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-emerald-500 text-emerald-600 ring-1 ring-inset ring-emerald-700/10 mr-1">Books</span>
+              <span class="bg-amber-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-amber-400 text-amber-600 ring-1 ring-inset ring-amber-700/10 mr-1">Media</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">The largest truly open & free library in human history.</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Misc" href="https://github.com/xhruso00/redeemApple" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/redeemApple_favicon.png" class="hidden rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/redeemApple_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">redeemApple</span>
+              <span class="bg-slate-400/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-slate-500 text-slate-600 ring-1 ring-inset ring-slate-700/10 mr-1">Misc</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Apple Music and iCloud redemption codes list</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="VFX" id="GFX" href="https://www.reddit.com/r/GenP/wiki/redditgenpguides/" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/genp_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/genp_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">GenP</span>
+              <span class="bg-lime-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-lime-500 text-lime-600 ring-1 ring-inset ring-lime-700/10 mr-1">VFX</span>
+              <span class="bg-rose-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-rose-400 text-rose-600 ring-1 ring-inset ring-rose-700/10 mr-1">GFX</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Adobe Creative Cloud - r/AdobeZii is for Mac</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Pirate" href="https://getintopc.com/" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/GetIntoPc_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/GetIntoPc_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">GetIntoPc</span>
+              <span class="bg-teal-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-teal-400 text-teal-600 ring-1 ring-inset ring-teal-700/10 mr-1">Pirate</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Good general site for softwares, plugins, and VSTs.</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Media" href="https://myflixerz.to" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/MyFlixer_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/MyFlixer_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">MyFlixer</span>
+              <span class="bg-amber-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-amber-400 text-amber-600 ring-1 ring-inset ring-amber-700/10 mr-1">Media</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">An OG site movies and shows</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Pirate" href="https://kemono.su" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/Kemono_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/Kemono_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">Kemono</span>
+              <span class="bg-teal-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-teal-400 text-teal-600 ring-1 ring-inset ring-teal-700/10 mr-1">Pirate</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Public Archive for Patreon and more pages for free</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="VFX" href="https://animeclips.online" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/animeclips_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/animeclips_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">animeclipsonline</span>
+              <span class="bg-lime-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-lime-500 text-lime-600 ring-1 ring-inset ring-lime-700/10 mr-1">VFX</span>
+              <span class="bg-amber-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-amber-400 text-amber-600 ring-1 ring-inset ring-amber-700/10 mr-1">Media</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Anime clips for editing</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Books" href="http://libgen.is" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/libgen_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/libgen_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">Library Genesis</span>
+              <span class="bg-emerald-400/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-emerald-500 text-emerald-600 ring-1 ring-inset ring-emerald-700/10 mr-1">Books</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Free books and textbooks</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="VFX" href="https://vfxdownload.net" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/vfxdownload_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/vfxdownload_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">VFXDownload</span>
+              <span class="bg-lime-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-lime-500 text-lime-600 ring-1 ring-inset ring-lime-700/10 mr-1">VFX</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Site for AE and other VFX plugins</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Pirate" href="https://www.ovagames.com" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/ovagames_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/ovagames_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">OVAGames</span>
+              <span class="bg-indigo-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-indigo-400 text-indigo-600 ring-1 ring-inset ring-indigo-700/10 mr-1">Games</span>
+              <span class="bg-teal-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-teal-400 text-teal-600 ring-1 ring-inset ring-teal-700/10 mr-1">Pirate</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Fast download site for pirated games</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Pirate" href="https://rezi.one" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/rezi_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/rezi_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">Rezi</span>
+              <span class="bg-indigo-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-indigo-400 text-indigo-600 ring-1 ring-inset ring-indigo-700/10 mr-1">Games</span>
+              <span class="bg-teal-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-teal-400 text-teal-600 ring-1 ring-inset ring-teal-700/10 mr-1">Pirate</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Search engline for finding pirated games</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Misc" id="Games" href="https://myemulator.online" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/myemulator_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/myemulator_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">MyEmulator.Online</span>
+              <span class="bg-indigo-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-indigo-400 text-indigo-600 ring-1 ring-inset ring-indigo-700/10 mr-1">Games</span>
+              <span class="bg-slate-400/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-slate-500 text-slate-600 ring-1 ring-inset ring-slate-700/10 mr-1">Misc</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Play retro games online</span>
+          </div>
+        </a>
+        <!----------------------------->
+        <a id="Media" id="Misc" href="https://letterboxd.com/" target="_blank" class="bg-n-container dark:bg-n-dark-container hover:bg-n-container-hover dark:hover:bg-n-dark-container-hover relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+          <div class="items-center">
+            <img src="/assets/site-captures/letterboxd_favicon.png" class="rounded-2xl z-10 absolute pl-3 p-3 drop-shadow-md">
+            <img src="/assets/site-captures/letterboxd_screenshot.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="Image of mentioned site">
+            <div class="flex flex-row">
+              <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2">Letterboxd</span>
+              <span class="bg-amber-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-amber-400 text-amber-600 ring-1 ring-inset ring-amber-700/10 mr-1">Media</span>
+              <span class="bg-slate-400/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-slate-500 text-slate-600 ring-1 ring-inset ring-slate-700/10 mr-1">Misc</span>
+            </div>
+            <span class="text-n-text/80 dark:text-n-dark-text/80">Make a list of your favorite movies.</span>
           </div>
         </a>
         <!----------------------------->

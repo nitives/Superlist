@@ -65,7 +65,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 }
 
+.divider {
+	border-top: 10px solid;
+	border-radius: 10px;
+  }
 
+.darken {
+	filter: brightness(0.6);
+}
 
 
 

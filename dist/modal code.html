@@ -1,0 +1,37 @@
+        <div id="placeholder" class="idden"> <!-- THIS SECTION IS DEDICATED TO TESTING AND CHAT GPT -->
+          
+
+            <!-- The section that the user will click to open the modal -->
+            
+            <!-- Removed the href target to prevent default link behavior -->
+            <div id="clickable-box" class="bg-n-container dark:bg-n-dark-container relative flex w-full p-[12px] sm:p-4 transition border-2 border-transparent shadow cursor-pointer rounded-[24px] hover:-translate-y-1 hover:shadow-lg group min-w-0 flex-col justify-between">
+              <div class="items-center">
+                  <img src="/assets/logo/favicon-white.ico" class="z-10 absolute pl-3 p-3 drop-shadow-md w-1 h-1">
+                  <img src="https://superlist.cc/assets/site-captures/superlist_cc.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
+                <div class="flex flex-row">
+                  <span class="text-n-text dark:text-n-dark-text font-bold text-xl pr-2 rainbow-text">Superlist</span>
+                  <span class="bg-indigo-500/10 inline-flex items-center rounded-full px-2 text-xs font-medium dark:text-indigo-400 text-indigo-600 ring-1 ring-inset ring-indigo-700/10 mr-1">Super</span>
+                </div>
+                <span class="align-text-top text-n-text/80 dark:text-n-dark-text/80">The one and only</span>
+              </div>
+            </div>
+            
+            <!-- Modal Template (hidden by default) -->
+            <div id="modal" class="hidden z-50 fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full" onclick="closeModal()">
+              <div class="relative top-20 mx-auto p-5 w-96 shadow-lg rounded-3xl bg-n-dark-container">
+                <div class="text-center">
+                  <img src="https://superlist.cc/assets/site-captures/superlist_cc.png" class="relative top-0 left-0 pb-[6px] rounded-[12px] mx-auto object-contain object-center max-w-full max-h-full" loading="lazy" referrerpolicy="no-referrer" alt="image of mentioned site">
+                  <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-n-dark-text/50">
+                      Here is more information about the content you clicked on. You can add more details here.
+                    </p>
+                  </div>
+                  <div class="items-center px-4 py-3">
+                    <button id="ModalClose" onclick="closeModal()" class="px-4 py-2 bg-n-secondary-600 text-white text-base font-medium rounded-md shadow-sm hover:bg-n-secondary-900 focus:outline-none focus:ring-2 focus:ring-n-secondary-600">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> <!-- THIS SECTION IS DEDICATED TO TESTING AND CHAT GPT  -->

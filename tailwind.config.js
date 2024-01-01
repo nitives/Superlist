@@ -30,8 +30,15 @@ module.exports = {
           '950': '#302154',
       },
         'n-accent': '#3f2da4',
-        'n-high': '#39F782',
-  
+
+        'n-success': '#39f78a',
+        'n-success-muted': '#30d375',
+        'n-error': '#fe3c3c',
+        'n-error-muted': '#e23636',
+        'n-warning': '#ffc765',
+        'n-warning-muted': '#edb95e',
+        
+
         'n-dark-text': '#e6e3f7',
         'n-dark-background': '#070514',
         'n-dark-container': '#120f26',

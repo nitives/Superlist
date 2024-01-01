@@ -4,6 +4,7 @@ const path = require('path');
 const axios = require('axios');
 const sharp = require('sharp'); // Import sharp
 
+/* 
 const websites = [
   { id: 'FileCR', url: 'https://filecr.com/en/' },
   { id: '4Download', url: 'http://www.4download.net' },
@@ -12,7 +13,16 @@ const websites = [
   { id: 'GFXFather', url: 'https://gfxfather.com' },
   { id: 'MangaDex', url: 'https://mangadex.org' },
   { id: 'Comick', url: 'https://comick.cc/home' },
+  { id: 'noclip.website', url: 'https://noclip.website' },
+  { id: 'Annas Archive', url: 'https://www.annas-archive.org' },
+  { id: 'GetIntoPc', url: 'https://getintopc.com/' },
   { id: 'Superlist', url: 'https://superlist.cc' },
+];
+*/
+
+const websites = [
+  { id: 'rezi', url: 'https://rezi.one' },
+  { id: 'ovagames', url: 'https://www.ovagames.com' },
 ];
 
 // Specify the folder path where you want to save the screenshots
