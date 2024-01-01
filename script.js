@@ -30,37 +30,43 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // -----------------------------------------------------------------------------------
     
-    var debounceTimer;
+var debounceTimer;
+
+// Function to handle live search
+function searchSites() {
+  // Clear the previous debounce timer
+  clearTimeout(debounceTimer);
+
+  // Set a new debounce timer
+  debounceTimer = setTimeout(function() {
+    // Get the search input value
+    var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+
+    // Get all the card elements
+    var cards = document.querySelectorAll('.bg-n-container');
+
+    // Loop through each card and check if it contains the search query
+    cards.forEach(function(card) {
+      // Skip the search input element
+      if (card.id.toLowerCase() === 'searchinput') {
+        return;
+      }
+
+      var cardId = card.id.toLowerCase();
+      if (cardId.includes(searchQuery)) {
+        // If the card ID contains the search query, show the card
+        card.style.display = 'flex';
+      } else {
+        // If not, hide the card
+        card.style.display = 'none';
+      }
+    });
+  }, 300); // Adjust the debounce delay (in milliseconds) as needed
+}
+
+// Add event listener for the input event on the search input field
+document.getElementById('searchInput').addEventListener('input', searchSites);
     
-    // Function to handle live search
-    function searchSites() {
-      // Clear the previous debounce timer
-      clearTimeout(debounceTimer);
-    
-      // Set a new debounce timer
-      debounceTimer = setTimeout(function() {
-        // Get the search input value
-        var searchQuery = document.getElementById('searchInput').value.toLowerCase();
-    
-        // Get all the card elements
-        var cards = document.querySelectorAll('.bg-n-container');
-    
-        // Loop through each card and check if it contains the search query
-        cards.forEach(function(card) {
-          var cardId = card.id.toLowerCase();
-          if (cardId.includes(searchQuery)) {
-            // If the card ID contains the search query, show the card
-            card.style.display = 'flex';
-          } else {
-            // If not, hide the card
-            card.style.display = 'none';
-          }
-        });
-      }, 300); // Adjust the debounce delay (in milliseconds) as needed
-    }
-    
-    // Add event listener for the input event on the search input field
-    document.getElementById('searchInput').addEventListener('input', searchSites);
     
 
 /*

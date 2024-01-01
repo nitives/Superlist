@@ -70,8 +70,4 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	filter: brightness(0.6);
 }
 
-.dark-back {
-	background: rgb(7,5,20);
-	background: linear-gradient(49deg, rgba(7,5,20,1) 0%, rgba(19,16,38,1) 100%);
-}
 
