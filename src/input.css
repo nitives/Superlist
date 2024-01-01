@@ -42,10 +42,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	animation: scale-easeOutElastic 1s ease infinite;
 }
 
-.foxy:hover {
-	animation: ;
-}
-
 @keyframes scale-easeOutElastic {
 	0% {
 		transform: scale(1);
@@ -74,6 +70,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	filter: brightness(0.6);
 }
 
-
-
+.dark-back {
+	background: rgb(7,5,20);
+	background: linear-gradient(49deg, rgba(7,5,20,1) 0%, rgba(19,16,38,1) 100%);
+}
 
