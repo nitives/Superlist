@@ -30,42 +30,37 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // -----------------------------------------------------------------------------------
     
-var debounceTimer;
+    var debounceTimer;
 
-// Function to handle live search
-function searchSites() {
-  // Clear the previous debounce timer
-  clearTimeout(debounceTimer);
-
-  // Set a new debounce timer
-  debounceTimer = setTimeout(function() {
-    // Get the search input value
-    var searchQuery = document.getElementById('searchInput').value.toLowerCase();
-
-    // Get all the card elements
-    var cards = document.querySelectorAll('.bg-n-container');
-
-    // Loop through each card and check if it contains the search query
-    cards.forEach(function(card) {
-      // Skip the search input element
-      if (card.id.toLowerCase() === 'searchinput') {
-        return;
-      }
-
-      var cardId = card.id.toLowerCase();
-      if (cardId.includes(searchQuery)) {
-        // If the card ID contains the search query, show the card
-        card.style.display = 'flex';
-      } else {
-        // If not, hide the card
-        card.style.display = 'none';
-      }
-    });
-  }, 300); // Adjust the debounce delay (in milliseconds) as needed
-}
-
-// Add event listener for the input event on the search input field
-document.getElementById('searchInput').addEventListener('input', searchSites);
+    function searchSites() {
+      clearTimeout(debounceTimer);
+    
+      debounceTimer = setTimeout(function() {
+        var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+        var cards = document.querySelectorAll('.bg-n-container:not(#searchInput)');
+    
+        cards.forEach(function(card) {
+          if (searchQuery === '') {
+            // If the search query is empty, display all cards
+            card.style.display = 'flex';
+          } else {
+            var dataTags = card.getAttribute('data-tags');
+            var tags = dataTags ? dataTags.toLowerCase().split(',') : [];
+    
+            var match = tags.some(function(tag) {
+              return tag.trim().includes(searchQuery);
+            });
+    
+            card.style.display = match ? 'flex' : 'none';
+          }
+        });
+      }, 300);
+    }
+    
+    document.getElementById('searchInput').addEventListener('input', searchSites);
+    
+    
+    
     
     
 
