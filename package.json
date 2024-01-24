@@ -1,14 +1,16 @@
 {
-  "name": "superlist",
-  "version": "3.5.0",
-  "description": "A ultimate tool",
-  "main": "captureScreenshots.js",
+  "name": "superlist-3.0",
+  "version": "3.0.0",
+  "description": "",
+  "homepage": "https://superlist.cc",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "x": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
   },
   "author": "nite",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.3.5"
   }
 }
