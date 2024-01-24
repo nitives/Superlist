@@ -70,4 +70,39 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	filter: brightness(0.6);
 }
 
+.minibutton {
+    box-shadow: inset 0 0 0 0.1rem #ffffff16;
+    border-radius: 0.6rem;
+    background: #0a0a0a80;
+    display: flex;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
 
+.minibuttonhover {
+    background-color: #ffffff12;
+}
+
+.elu {
+	background-image: repeating-linear-gradient(120deg, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #e3efff, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #94a3b8, #94a3b8);
+	text-align: center;
+	background-size: 350% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: elu 7s linear infinite;
+	animation-direction: normal;
+	color: transparent;
+  }
+  
+  @keyframes elu { 
+    0% { background-position: 100% 25% }
+	100% { background-position: 0% 50% }
+  }
+
+.emoji {
+    display: flex;
+    display: inline-block;
+    height: 1em;
+    vertical-align: -0.20em;
+    border-radius: 3px;
+}
