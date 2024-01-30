@@ -11,6 +11,7 @@ module.exports = {
         'transparent': 'transparent',
         'n-text': '#0b081c',
         'n-background': '#edebfa',
+        'nx-background': '#edebfa',
         'n-container': '#dddbeb',
         'n-container-hover': '#e1dff0',
         'n-primary': '#7463d4',
@@ -39,6 +40,7 @@ module.exports = {
 
         'n-dark-text': '#e6e3f7',
         'n-dark-background': '#070514',
+        'nx-dark-background': '#070514',
         'n-dark-container': '#120f26',
         'n-dark-container-hover': '#16112b',
         'n-dark-primary': '#3c2b9c',

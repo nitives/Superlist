@@ -60,6 +60,13 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('searchInput').addEventListener('input', searchSites);
     
     
+    window.addEventListener("keydown", (e) => {
+      if (e.code === 'F3' || ((e.ctrlKey || e.metaKey) && e.code === 'KeyK')) { 
+        e.preventDefault();
+        const searchInput = document.querySelector('#searchInput')
+        searchInput.focus()
+      }
+    })
     
     
     
