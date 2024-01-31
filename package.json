@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "x": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
+    "x": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "author": "nite",
   "license": "ISC",
