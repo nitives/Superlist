@@ -33,7 +33,7 @@
     <meta property=’og:url’ content='https://superlist.cc'/>
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' /> 
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="/src/input.css">
     <link rel="stylesheet" href="/src/output.css">
     <link rel="stylesheet" href="/font.css">
     <link rel="icon" href="/assets/logo/favicon-black.ico" type="image/ico">
@@ -43,7 +43,7 @@
     <script src="script.js" defer></script>
     
 </head>
-<body class="bg-[#060606] text-n-text dark:text-n-dark-text antialiased flex flex-col">
+<body class="bg-[#06606] text-n-text dark:text-n-dark-text antialiased flex flex-col">
   <style> ::selection {background: #7463d4;} </style>
   <header class="z-50 w-full">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8"> <!--Header-->
@@ -65,7 +65,7 @@
         <div class="hidden md:flex gap-3 items-center">
             <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
                 <input id="movieInput" class="focus-visible block w-full ml-32 px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-400 dark:placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-dark-container/[5%] dark:bg-n-container/5 focus:bg-n-background/40 dark:focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added=""> 
-                <kbd class="dark:bg-n-dark-background bg-n-background absolute my-auto select-none md:ml-[96px] ml-[125px] h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">CTRL K</kbd>
+                <kbd class="dark:bg-n-dark-background bg-n-background absolute my-auto select-none ml-[245px] h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">CTRL K</kbd>
             </form>
             <button id="searchButton" onclick="fetchMovieResults()">
               <svg stroke-width="3.5" class="stroke-n-dark-background dark:stroke-n-background h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
