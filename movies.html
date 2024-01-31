@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="font-abc h-full scroll-smooth bg-n-background dark:bg-n-dark-background antialiased" lang="en">
+<html class="font-abc h-full scroll-smooth bg-[#060606] antialiased" lang="en">
 <head>
     <!-- HTML Meta Tags -->
     <title>Superlist</title>
@@ -24,7 +24,6 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
     <meta name="google-adsense-account" content="ca-pub-7360945644498149">
     <meta name="description" content="The Ultimate List of the Internet, find any link for any task you might need"> 
     <meta name="theme-color" content="#7463d4">
@@ -35,6 +34,7 @@
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' /> 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="font.css">
     <link rel="icon" href="/assets/logo/favicon-black.ico" type="image/ico">
     <link rel="apple-touch-icon" href="/assets/logo/apple_superlist.png">
@@ -43,7 +43,7 @@
     <script src="script.js" defer></script>
     
 </head>
-<body class="light-noise dark-noise bg-n-background dark:bg-n-dark-background text-n-text dark:text-n-dark-text antialiased flex flex-col">
+<body class="bg-[#060606] text-n-text dark:text-n-dark-text antialiased flex flex-col">
   <style> ::selection {background: #7463d4;} </style>
   <header class="z-50 w-full">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8"> <!--Header-->
@@ -58,15 +58,20 @@
             <svg class="relative h-4 w-4 !fill-n-primary" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-base font-semibold">Superlist OG</span>
+            <span class="text-center text-base font-semibold">Superlist OG</span>
         </a>
 
         <!--Search Bar & Socials-->
         <div class="hidden md:flex gap-3 items-center">
-            <form action="" class="flex relative items-center">
-                <input class="focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-400 dark:placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-dark-container/[5%] dark:bg-n-container/5 focus:bg-n-background/40 dark:focus:bg-n-dark-background/10" id="searchInput" type="search" placeholder="Search…" value="" data-focus-visible-added=""> 
+            <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
+                <input id="movieInput" class="focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-400 dark:placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-dark-container/[5%] dark:bg-n-container/5 focus:bg-n-background/40 dark:focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added=""> 
                 <kbd class="dark:bg-n-dark-background bg-n-background absolute my-auto select-none ml-[125px] h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">CTRL K</kbd>
             </form>
+            <button id="searchButton" onclick="fetchMovieResults()">
+              <svg stroke-width="3.5" class="stroke-n-dark-background dark:stroke-n-background h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>              
+            </button>
 
             <a target="_blank" href="https://discord.com/invite/ZfqZrefRHC"> <!--Discord-->
                 <svg class="fill-n-dark-background dark:fill-n-background h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.94 18.53">
@@ -97,24 +102,29 @@
     <!--Title Mobile-->
     <div class="flex items-center justify-center lg:hidden">
         <a class="pl-5 items-center gap-[1.] flex">
-            <span class="font-bold text-base">The <i class="pr-[3px] rainbow-text">New!</i> Ultimate List of the Internet</span>
+            <span class="text-center font-bold text-base">Enjoy the <i class="pr-[3px] rainbow-text">New!</i> Superlist movie player</span>
             <img draggable="false" class="relative h-7" src="/assets/icons/sparkles.webp" alt="a animated sparkles emoji">
         </a>
     </div>
+    <!--Search Bar Mobile-->
+    <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center md:hidden">
+        <input id="movieInput" class="mx-10 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-400 dark:placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-dark-container/[5%] dark:bg-n-container/5 focus:bg-n-background/40 dark:focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added=""> 
+    </form>
+
     <!--Title Desktop-->
     <div class="flex items-center justify-center">
         <a class="pl-5 items-center gap-[1.7] lg:flex hidden">
-            <span class="font-bold text-2xl">The <i class="pr-[3px] rainbow-text">New!</i> Ultimate List of the Internet</span>
+            <span class="text-center font-bold text-2xl">Enjoy the <i class="pr-[3px] rainbow-text">New!</i> Superlist Movie Player</span>
             <img draggable="false" class="relative h-7" src="/assets/icons/sparkles.webp" alt="a animated sparkles emoji">
         </a>
     </div>
     
   </header>
-  <main>
-    <script src="movie.js" defer></script>
-    
-    <iframe src="https://superlist.cc/htdocs/superlist_player.php?video_id=tt8385148" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
 
+  <main class="flex justify-center">
+      <iframe src="https://blackscreen.app/" class="w-full h-screen mx-36 mb-36  rounded-2xl " id="movieIframe" frameborder="0" allowfullscreen></iframe>
+      <script src="movie.js"></script>
   </main>
+
 </body> 
 </html>
