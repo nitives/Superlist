@@ -32,7 +32,7 @@
 }
 
 .windows::before {
-	content: "Ctrl";
+	content: "CTRL";
 }
 
 .windows .shortcut {
