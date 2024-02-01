@@ -68,20 +68,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
 
-    /* Mac & Windows Search Icon */
+/* Mac & Windows Search Icon */
 
-    document.addEventListener('DOMContentLoaded', function() {
-      var isMac = navigator.userAgent.indexOf('Mac') > -1;
+document.addEventListener('DOMContentLoaded', function() {
+  var isMac = navigator.userAgent.indexOf('Mac') > -1;
+  var keyboardShortcut = document.querySelector('.keyboard-shortcut');
 
-      if (isMac) {
-        document.body.classList.add('mac');
-      } else {
-        document.body.classList.add('windows');
-      }
-    });
-    
-    
-    
+  if (isMac) {
+    keyboardShortcut.classList.add('mac');
+  } else {
+    keyboardShortcut.classList.add('windows');
+  }
+});
+
+/* ------------------------------- */
 
 /*
 function openModal() {
