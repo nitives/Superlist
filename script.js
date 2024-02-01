@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Mac & Windows Search Icon */
 
     document.addEventListener('DOMContentLoaded', function() {
-      var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+      var isMac = navigator.userAgent.indexOf('Mac') > -1;
 
       if (isMac) {
         document.body.classList.add('mac');
