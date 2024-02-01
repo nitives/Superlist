@@ -1,6 +1,6 @@
 backend:
   name: Superlist
-  repo: nitives/nitives.github.io   # Replace with your GitHub username and repository name
+  repo: nitives/nitives.github.io
 
 media_folder: "assets"
 public_folder: "/media"
