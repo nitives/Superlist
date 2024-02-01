@@ -67,6 +67,18 @@ document.addEventListener('DOMContentLoaded', function () {
         searchInput.focus()
       }
     })
+
+    /* Mac & Windows Search Icon */
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+
+      if (isMac) {
+        document.body.classList.add('mac');
+      } else {
+        document.body.classList.add('windows');
+      }
+    });
     
     
     

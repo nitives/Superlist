@@ -13,6 +13,32 @@
 	src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
 }
 
+/* Mac and Windows Icon */
+
+.mac .windows {
+	display: none;
+}
+
+.mac::before {
+	content: "⌘";
+}
+
+.mac .shortcut {
+	display: inline;
+}
+
+.windows .mac {
+	display: none;
+}
+
+.windows::before {
+	content: "Ctrl";
+}
+
+.windows .shortcut {
+      display: inline;
+}
+
 
 
 /* clears the ‘X’ from Internet Explorer */
