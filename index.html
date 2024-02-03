@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="font-abc lg:tracking-normal md:tracking-normal tracking-tighter h-full scroll-smooth bg-n-background dark:bg-n-dark-background antialiased" lang="en">
+<html class="font-abc lg:tracking-normal md:tracking-normal tracking-[-0.04em] h-full scroll-smooth bg-n-background dark:bg-n-dark-background antialiased" lang="en">
 <head>
     <!-- HTML Meta Tags -->
     <title>Superlist</title>
@@ -57,7 +57,7 @@
   <header class="z-50 w-full">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8"> <!--Header-->
         <!--Logo-->
-        <a alt="Superlist Logo" href="https://superlist.cc" class=""> 
+        <a alt="Superlist Logo" href="https://superlist.cc" class="z-[100]"> 
             <svg class="fill-n-dark-background dark:fill-n-background h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.57 24">
                 <path d="M6.84,22.27,8.57,24l1.71-1.7L12,24l1.72-1.72L12,20.55l1.71-1.71,1.72,1.73,5.13-5.14-5.14-5.15,5.14-5.14L15.42,0,10.28,5.14,5.14,0,0,5.14l5.14,5.14L0,15.42l5.14,5.15,1.71-1.71,1.7,1.69Zm1.73-5.12,1.71-1.71L12,17.15l-1.7,1.7Z"/></g></g></g></g>
             </svg>
@@ -74,7 +74,7 @@
         <div class="hidden md:flex gap-3 items-center">
             <div class="inline-flex items-center">
               <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
-                <input id="searchInput" class="searchInput focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added="">
+                <input id="searchInput" class="searchInput focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" type="search" placeholder="Search..." value="" data-focus-visible-added="">
               </form>
               <kbd class="ml-[126px] text-center dark:bg-n-dark-background bg-n-background absolute my-auto select-none h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">
                 <kbd class="keyboard-shortcut"></kbd><kbd class="keyboard-shortcut"></kbd> K
@@ -100,18 +100,34 @@
         
 
         <!--Menu-->
-        <a alt="Menu Button" class="lg:hidden md:hidden cursor-pointer"> 
+        <button id="MobileMenu" alt="Menu Button" class="lg:hidden md:hidden cursor-pointer"> 
             <svg class="fill-n-dark-background dark:fill-n-background h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75 h16.5 M3.75 12h16.5m-16.5 5.25h16.5"/>
             </svg>
-        </a>
+        </button>
+        
+        <nav class="hidden mobile-menu bg-n-background dark:bg-n-dark-background">
+          <div class="scale-125 flex justify-center">
+            <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
+              <svg class="absolute left-[6px] fill-n-dark-background dark:fill-n-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                <path class="btn-icon" fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
+              </svg>
+
+              <input id="searchInput" class="placeholder:text-gray-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
+            
+              <svg class="relative right-[22px] fill-n-dark-background dark:fill-n-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm2.78-4.22a.75.75 0 0 1-1.06 0L8 9.06l-1.72 1.72a.75.75 0 1 1-1.06-1.06L6.94 8 5.22 6.28a.75.75 0 0 1 1.06-1.06L8 6.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L9.06 8l1.72 1.72a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+              </svg>
+            </form>
+          </div>
+        </nav>
 
     </nav>
     <!--Title Mobile-->
     <div class="flex items-center justify-center lg:hidden">
         <a class="pl-5 items-center gap-[1.] flex">
-            <span class="font-bold text-base">The <i class="pr-[3px] rainbow-text">New!</i> Ultimate List of the Internet</span>
-            <img draggable="false" class="relative h-7" src="/assets/icons/sparkles.webp" alt="a animated sparkles emoji">
+            <span class="font-bold text-center text-base">The <i class="pr-[3px] rainbow-text">New!</i>Ultimate List of the Internet</span>
+            <img draggable="false" class="relative right-[104px] top-[13px] h-[27px]" src="/assets/icons/sparkles.webp" alt="a animated sparkles emoji">
         </a>
     </div>
     <!--Title Desktop-->

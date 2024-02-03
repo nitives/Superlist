@@ -84,6 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* ------------------------------- */
 
+/* Menu Button */
+
+const menu = document.querySelector('MobileMenu')
+
+document.addEventListener('click', function () {
+    menu.classList.toggle('is-active')
+})
+
+/* ------------------------------- */
+
 /*
 function openModal() {
     document.getElementById('modal').classList.remove('hidden');
