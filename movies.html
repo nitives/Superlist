@@ -63,12 +63,15 @@
 
         <!--Search Bar & Socials-->
         <div class="hidden md:flex gap-3 items-center">
+          <div class="inline-flex items-center">
             <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
-                <input id="movieInput" class="focus-visible block w-full ml-32 px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added="">
-                <kbd class="ml-[125px] text-center dark:bg-n-dark-background bg-n-background absolute my-auto select-none h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">
-                  <kbd class="keyboard-shortcut mac"></kbd><kbd class="keyboard-shortcut"></kbd> K
-                </kbd>
+              <input id="movieInput" class="focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added="">
             </form>
+            <kbd class="ml-[135px] text-center dark:bg-n-dark-background bg-n-background absolute my-auto select-none h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">
+              <kbd class="keyboard-shortcut mac"></kbd><kbd class="keyboard-shortcut"></kbd> K
+            </kbd>
+          </div>
+            
             <button id="searchButton" onclick="fetchMovieResults()">
               <svg stroke-width="3.5" class="stroke-n-background h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />

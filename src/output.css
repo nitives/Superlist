@@ -592,6 +592,14 @@ video {
   top: 25px;
 }
 
+.left-\[1\] {
+  left: 1;
+}
+
+.left-\[150px\] {
+  left: 150px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -676,8 +684,32 @@ video {
   margin-left: 120px;
 }
 
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.ml-\[1\] {
+  margin-left: 1;
+}
+
+.ml-\[130px\] {
+  margin-left: 130px;
+}
+
+.ml-\[138px\] {
+  margin-left: 138px;
+}
+
+.ml-\[135px\] {
+  margin-left: 135px;
+}
+
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
