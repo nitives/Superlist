@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	* {
-		font-family: "ABCDiatypeVariable", system-ui, sans-serif;
-	}
-}
-
-@font-face {
-	font-family: 'ABCDiatypeVariable';
-	src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
-}
 
 /* Mac and Windows Icon */
 

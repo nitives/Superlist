@@ -444,10 +444,6 @@ video {
   display: none;
 }
 
-* {
-  font-family: "ABCDiatypeVariable", system-ui, sans-serif;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1182,16 +1178,8 @@ video {
   font-family: ABCDiatypeVariable;
 }
 
-.font-inter {
-  font-family: InterVariable;
-}
-
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.font-undertale {
-  font-family: DeterminationSansWeb;
 }
 
 .text-2xl {
@@ -1501,12 +1489,6 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@font-face {
-  font-family: 'ABCDiatypeVariable';
-
-  src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
 }
 
 /* Mac and Windows Icon */
