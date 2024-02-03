@@ -58,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     document.getElementById('searchInput').addEventListener('input', searchSites);
-    
-    
     window.addEventListener("keydown", (e) => {
       if (e.code === 'F3' || ((e.ctrlKey || e.metaKey) && e.code === 'KeyK')) { 
         e.preventDefault();
@@ -72,16 +70,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
   var isMac = navigator.userAgent.indexOf('Mac') > -1;
+  console.log('Is Mac:', isMac);
   var keyboardShortcut = document.querySelector('.keyboard-shortcut');
-
   if (isMac) {
-    keyboardShortcut.classList.add('mac');
+    keyboardShortcut.parentElement.classList.add('mac');
     console.log('Mac Device - Icon Added');
   } else {
-    keyboardShortcut.classList.add('windows');
+    keyboardShortcut.parentElement.classList.add('windows');
     console.log('Windows Device - Icon Added');
   }
 });
+
 
 /* ------------------------------- */
 

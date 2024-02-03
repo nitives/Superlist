@@ -668,6 +668,14 @@ video {
   margin-top: 3px;
 }
 
+.ml-\[130px\] {
+  margin-left: 130px;
+}
+
+.ml-\[120px\] {
+  margin-left: 120px;
+}
+
 .block {
   display: block;
 }
@@ -1825,6 +1833,10 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-left: 435px;
   }
 
+  .md\:ml-\[125px\] {
+    margin-left: 125px;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1867,6 +1879,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .lg\:top-\[40px\] {
     top: 40px;
+  }
+
+  .lg\:ml-\[135px\] {
+    margin-left: 135px;
   }
 
   .lg\:flex {
