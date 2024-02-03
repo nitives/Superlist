@@ -632,12 +632,12 @@ video {
   margin-left: 8rem;
 }
 
-.ml-\[118px\] {
-  margin-left: 118px;
-}
-
 .ml-\[125px\] {
   margin-left: 125px;
+}
+
+.ml-\[1px\] {
+  margin-left: 1px;
 }
 
 .ml-\[253px\] {
@@ -666,6 +666,14 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
+}
+
+.ml-\[100px\] {
+  margin-left: 100px;
+}
+
+.ml-\[120px\] {
+  margin-left: 120px;
 }
 
 .block {
@@ -918,11 +926,6 @@ video {
 .bg-\[\#060606\] {
   --tw-bg-opacity: 1;
   background-color: rgb(6 6 6 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#060676\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 6 118 / var(--tw-bg-opacity));
 }
 
 .bg-amber-500\/10 {
@@ -1496,6 +1499,32 @@ video {
   src: url('/assets/fonts/ABCDiatypeVariable.ttf') format("truetype");
 }
 
+/* Mac and Windows Icon */
+
+.mac .windows {
+  display: none;
+}
+
+.mac::before {
+  content: "⌘";
+}
+
+.mac .shortcut {
+  display: inline;
+}
+
+.windows .mac {
+  display: none;
+}
+
+.windows::before {
+  content: "CTRL";
+}
+
+.windows .shortcut {
+  display: inline;
+}
+
 /* clears the ‘X’ from Internet Explorer */
 
 input[type=search]::-ms-clear {
@@ -1633,6 +1662,18 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100vw;
     display: flex;
   }
+}
+
+/* Player CSS */
+
+.jw-icon[button=vidsrc] {
+  width: 90px;
+  visibility: hidden;
+}
+
+.jw-icon[button=vidsrc] .jw-button-image {
+  width: 70px;
+  visibility: hidden;
 }
 
 .placeholder\:text-gray-400::-moz-placeholder {
@@ -1794,34 +1835,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .md\:ml-\[269px\] {
     margin-left: 269px;
-  }
-
-  .md\:ml-\[300px\] {
-    margin-left: 300px;
-  }
-
-  .md\:ml-\[30px\] {
-    margin-left: 30px;
-  }
-
-  .md\:ml-\[340px\] {
-    margin-left: 340px;
-  }
-
-  .md\:ml-\[40px\] {
-    margin-left: 40px;
-  }
-
-  .md\:ml-\[400px\] {
-    margin-left: 400px;
-  }
-
-  .md\:ml-\[440px\] {
-    margin-left: 440px;
-  }
-
-  .md\:ml-\[430px\] {
-    margin-left: 430px;
   }
 
   .md\:ml-\[435px\] {

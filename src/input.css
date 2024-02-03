@@ -159,3 +159,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	}
   }
 
+/* Player CSS */
+
+.jw-icon[button=vidsrc] {
+    width: 90px;
+    visibility: hidden;
+}
+
+.jw-icon[button=vidsrc] .jw-button-image {
+    width: 70px;
+    visibility: hidden;
+}
+
