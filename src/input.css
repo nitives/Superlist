@@ -191,7 +191,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .placeholder::-webkit-input-placeholder {
-	color: red;
+	color: white;
 }
 
 
