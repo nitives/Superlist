@@ -680,6 +680,10 @@ video {
   margin-left: 126px;
 }
 
+.ml-\[12px\] {
+  margin-left: 12px;
+}
+
 .block {
   display: block;
 }
