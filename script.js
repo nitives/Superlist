@@ -76,8 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (isMac) {
     keyboardShortcut.classList.add('mac');
+    console.log('Mac Device - Icon Added');
   } else {
     keyboardShortcut.classList.add('windows');
+    console.log('Windows Device - Icon Added');
   }
 });
 
