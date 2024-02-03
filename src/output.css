@@ -1172,6 +1172,10 @@ video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .align-text-top {
   vertical-align: text-top;
 }
