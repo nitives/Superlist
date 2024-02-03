@@ -49,6 +49,9 @@ module.exports = {
       },
       fontFamily: {
         'abc': ['ABCDiatypeVariable'],
+        'inter': ['InterVariable'],
+        'marlin': ['Marlin'],
+        'marlinsoft': ['Marlin Soft Basic'],
         'undertale': ['DeterminationSansWeb'],
       },
     },

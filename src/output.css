@@ -1182,8 +1182,16 @@ video {
   font-family: ABCDiatypeVariable;
 }
 
+.font-inter {
+  font-family: InterVariable;
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-undertale {
+  font-family: DeterminationSansWeb;
 }
 
 .text-2xl {
@@ -1652,7 +1660,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .dark-noise {
     background: linear-gradient(hsla(248, 60%, 5%, 0.85), hsla(248, 60%, 5%, 0.9)), url(/assets/etc/noise-light.png);
     height: 100vh;
-    width: 100vw;
+    margin: auto;
     display: flex;
   }
 }
@@ -1661,7 +1669,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .light-noise {
     background: linear-gradient(hsla(248, 60%, 95%, 0.6), hsla(248, 60%, 95%, 0.7)), url(/assets/etc/noise-light-dark.png);
     height: 100vh;
-    width: 100vw;
+    margin: auto;
     display: flex;
   }
 }

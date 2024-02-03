@@ -145,7 +145,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	.dark-noise {
 		background: linear-gradient(hsla(248, 60%, 5%, 0.85), hsla(248, 60%, 5%, 0.9)), url(/assets/etc/noise-light.png);
 		height: 100vh;
-		width: 100vw;
+		margin: auto;
 		display: flex;
 	}
   }
@@ -154,7 +154,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .light-noise {
 		background: linear-gradient(hsla(248, 60%, 95%, 0.6), hsla(248, 60%, 95%, 0.7)), url(/assets/etc/noise-light-dark.png);
 		height: 100vh;
-		width: 100vw;
+		margin: auto;
 		display: flex;
 	}
   }
