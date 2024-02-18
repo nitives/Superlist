@@ -201,6 +201,25 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 
+@media (min-width: 768px) {
+	.kbd-btn {
+	left: 170px;
+  }
+}
+
+@media (max-width: 852px) {
+	.kbd-btn {
+	left: 163px;
+  }
+}
+
+@media (max-width: 850px) {
+	.kbd-btn {
+	display: none;
+  }
+}
+
+
 
 
 /* Buttons */
