@@ -644,6 +644,10 @@ video {
   margin-left: 126px;
 }
 
+.ml-\[134px\] {
+  margin-left: 134px;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -666,10 +670,6 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
-}
-
-.ml-\[134px\] {
-  margin-left: 134px;
 }
 
 .block {
