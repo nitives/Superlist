@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.html
+
+RewriteEngine on
+RewriteEngine ^downloads downloads.html [NC]
+RewriteEngine ^og og.html [NC]
