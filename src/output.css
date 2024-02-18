@@ -641,14 +641,6 @@ video {
   margin-bottom: auto;
 }
 
-.ml-\[126px\] {
-  margin-left: 126px;
-}
-
-.ml-\[170px\] {
-  margin-left: 170px;
-}
-
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -671,10 +663,6 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
-}
-
-.ml-\[kbd-btn\] {
-  margin-left: kbd-btn;
 }
 
 .block {
