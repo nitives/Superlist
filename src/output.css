@@ -1097,6 +1097,10 @@ video {
   stroke: #edebfa;
 }
 
+.stroke-n-dark-background {
+  stroke: #070514;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2123,6 +2127,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .dark\:fill-n-background {
     fill: #edebfa;
+  }
+
+  .dark\:stroke-n-background {
+    stroke: #edebfa;
   }
 
   .dark\:text-amber-400 {
