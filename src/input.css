@@ -56,6 +56,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	100% { background-position: 0% 50% }
   }
 
+  .rainbow-text-404 {
+	background-image: repeating-linear-gradient(120deg, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #fff, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b, #3b3b3b);
+	text-align: center;
+	background-size: 350% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbow404 4s ease infinite;
+	animation-direction: normal;
+	color: transparent;
+  }
+  
+  @keyframes rainbow404 { 
+    0% { background-position: 100% 25% }
+	100% { background-position: 0% 50% }
+  }
+
 
 
 .foxy {
