@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- HTML Meta Tags -->
-    <title>Superlist</title>
+    <title id="var-title">Superlist</title>
     <meta name="description" content="The Ultimate List of the Internet, find any link for any task you might need">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HMB0LN394"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-2HMB0LN394'); </script>
@@ -38,11 +38,12 @@
     <link rel="icon" href="/og/assets/logo/favicon-white.ico" type="image/ico">
     <link rel="apple-touch-icon" href="/og/assets/logo/apple_superlist.png">
     <link href="./dist/pattern.min.css" rel="stylesheet">
+    <script src="loadjson.js"></script>
 </head>
 <body>
     <!-- BACKGROUND VIDEO -->
-        <video id="videoBG" autoplay="autoplay" style="pointer-events: none;" controls=false>
-        <source  id="video-st" src="/og/assets/background/gradientbg.mp4" type="video/mp4">
+        <video id="videoBG" poster="/og/assets/background/poster.png" autoplay muted loop playsinline style="pointer-events: none;">
+        <source id="videomp4" src="/og/assets/background/gradientbg.mp4" type="video/mp4">
         <img id="posterback" src="/og/assets/background/poster.png" />
         </video>
     <!---------------------->
@@ -63,7 +64,7 @@
             <p>The Ultimate List of the Internet <img draggable="false" class="emoji" src="/og/assets/icons/sparkles.webp"> </p>
         <!--More Buttons-->
         <div class="socials">
-                <a draggable="false" href="https://discord.gg/ZfqZrefRHC" target="_blank">
+                <a draggable="false" href="https://discord.gg/qT8wQTnhzz" target="_blank">
                     <img draggable="false" src="/og/assets/icons/discord_icon.svg"></img>
                 </a>
                 <a draggable="false" href="https://x.com/nitves" target="_blank">
@@ -417,12 +418,12 @@
     <footer class="footer-text">
         <h>Made with <img draggable="false" class="emoji" alt="❤️" src="/og/assets/icons/red-heart-emoji.png"> in Florida, USA</h>
         <a>&copy; 2023 SuperList by saber</a>
-        <a>v2.1</a>
+        <span id="var-version">v2.9</span>
     </footer>
     
     <!------------------------------------------------->
     
     <!------------------------------------------------->
-    <script src="./script.js"></script>
+    <script src="og/script.js"></script>
 </body>
 </html>
