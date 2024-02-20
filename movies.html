@@ -66,8 +66,8 @@
         <div class="hidden md:flex gap-3 items-center">
           <div class="inline-flex items-center">
             <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
-              <input id="movieInput" class="searchInput focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added="">
-              <kbd class="kbd-btn absolute text-center dark:bg-n-dark-background bg-n-background my-auto select-none h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">
+              <input id="movieInput" class="searchInput focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg dark:bg-n-container/5 bg-n-container focus:bg-n-dark-background/10" type="search" placeholder="Search movies…" value="" data-focus-visible-added="">
+              <kbd class="kbd-btn absolute text-center dark:bg-n-dark-background bg-n-background my-auto select-none h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-gray-500 border border-n-text/[.2] dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">
                 <kbd class="keyboard-shortcut"></kbd><kbd class="keyboard-shortcut"></kbd> K
               </kbd>
             </form>
@@ -89,7 +89,7 @@
                   <path d="M21.54,4.85c0,.22,0,.43,0,.64a13.92,13.92,0,0,1-14,14h0A13.92,13.92,0,0,1,0,17.29a9.18,9.18,0,0,0,1.17.07,9.92,9.92,0,0,0,6.12-2.11,4.92,4.92,0,0,1-4.6-3.42,5,5,0,0,0,2.22-.08A4.93,4.93,0,0,1,1,6.92V6.86a4.85,4.85,0,0,0,2.24.61A4.92,4.92,0,0,1,1.67.9,14,14,0,0,0,11.82,6a4.93,4.93,0,0,1,8.39-4.49A10.08,10.08,0,0,0,23.34.36a5,5,0,0,1-2.17,2.72A9.92,9.92,0,0,0,24,2.3a9.78,9.78,0,0,1-2.46,2.55Z"/></g></g>
                 </svg>
               </a>
-              <a target="_blank" href="https://github.com/nitives/nitives.github.io"> <!--GitHub-->
+              <a target="_blank" href="https://github.com/nitives/Superlist"> <!--GitHub-->
                 <svg class="fill-n-background h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.74 23.34">
                   <path class="cls-1" d="M11.88,0A12,12,0,0,0,8.12,23.32c.59.12.81-.26.81-.57s0-1.23,0-2.22c-3.31.71-4-1.43-4-1.43A3,3,0,0,0,3.6,17.36c-1.08-.74.08-.74.08-.74a2.49,2.49,0,0,1,1.83,1.23,2.51,2.51,0,0,0,3.46,1,2.5,2.5,0,0,1,.75-1.6C7.08,17,4.31,15.93,4.31,11.33A4.7,4.7,0,0,1,5.53,8.12,4.37,4.37,0,0,1,5.64,5s1-.31,3.27,1.23a11.5,11.5,0,0,1,5.94,0C17.11,4.64,18.11,5,18.11,5a4.33,4.33,0,0,1,.12,3.17,4.61,4.61,0,0,1,1.22,3.21c0,4.6-2.77,5.61-5.43,5.91a2.81,2.81,0,0,1,.81,2.22c0,1.6,0,2.89,0,3.29s.22.69.81.57A12,12,0,0,0,11.88,0Z"/></g></g>
                 </svg>
@@ -116,7 +116,7 @@
               <path class="btn-icon" fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
             </svg>
 
-            <input id="searchInput" class="placeholder:text-gray-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
+            <input id="searchInput" class="placeholder:text-gray-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg dark:bg-n-container/5 bg-n-container focus:bg-n-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
           
             <svg class="relative right-[22px] fill-n-dark-background dark:fill-n-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
               <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm2.78-4.22a.75.75 0 0 1-1.06 0L8 9.06l-1.72 1.72a.75.75 0 1 1-1.06-1.06L6.94 8 5.22 6.28a.75.75 0 0 1 1.06-1.06L8 6.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L9.06 8l1.72 1.72a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
@@ -134,7 +134,7 @@
     </div>
     <!--Search Bar Mobile-->
     <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center md:hidden">
-        <input id="movieInput" class="mx-10 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg bg-n-container/5 focus:bg-n-dark-background/10 font-semibold" type="search" placeholder="Search movies…" value="" data-focus-visible-added=""> 
+        <input id="movieInput" class="mx-10 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-gray-500 border-2 border-gray-100/0 hover:border-gray-100/20 outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg dark:bg-n-container/5 bg-n-container focus:bg-n-dark-background/10 font-semibold" type="search" placeholder="Search movies…" value="" data-focus-visible-added=""> 
     </form>
 
     <!--Title Desktop-->

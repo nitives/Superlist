@@ -6,7 +6,7 @@
 
 <h2>Questions</h2>
 
-Most reports and bugs can be answered by reading the [issues]((https://github.com/nitives/nitives.github.io/issues)).
+Most reports and bugs can be answered by reading the [issues]((https://github.com/nitives/Superlist/issues)).
 
 <h3 align="center"><strong>Thank you for viewing my repo!</strong></h3>
 <br/>
