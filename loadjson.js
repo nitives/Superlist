@@ -5,6 +5,7 @@ fetch('config.json')
     // Update elements with specific IDs
     document.getElementById('var-title').textContent = data.title || '';
     document.getElementById('var-version').textContent = data.version || '';
+    document.getElementById('var-policy').textContent = data.version || '';
 })
 .catch(error => {
     console.error('Error loading configuration:', error);
