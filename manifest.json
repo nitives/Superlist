@@ -1,0 +1,8 @@
+{
+    "name": "Superlist",
+    "short_name": "Superlist",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#070514",
+    "description": "The Ultimate List of the Internet, find any link for any task you might need.."
+}
