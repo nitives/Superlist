@@ -1429,6 +1429,14 @@ video {
   padding-top: 6px;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1461,6 +1469,11 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -2074,11 +2087,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* --------------------------- */
 
-a {
+.hover-fade {
   opacity: 1;
 }
 
-a:hover {
+.hover-fade:hover {
   opacity: 0.8;
 }
 
@@ -2123,7 +2136,6 @@ li::marker {
   -webkit-text-fill-color: transparent;
   color: unset;
   padding-bottom: 0.13em;
-  font-size: 80px;
   line-height: 1;
   letter-spacing: -0.02em;
   font-weight: 600;
@@ -2147,7 +2159,7 @@ li::marker {
   100% {
     filter: blur(0px);
     opacity: 1;
-    transform: translateY(none);
+    transform: translateY(0);
   }
 }
 
@@ -2589,6 +2601,10 @@ li::marker {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:text-7xl {
