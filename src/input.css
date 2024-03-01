@@ -219,8 +219,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   }
 }
 
+/* --------------------------- */
 
+a {
+	opacity: 1;
+}
 
+a:hover {
+	opacity: 0.8;
+}
 
 /* Buttons */
 
@@ -253,3 +260,69 @@ li::marker {
 	content: '• ';
 	font-size: 1em;
 }
+
+/* Pandabuy */
+
+.hero-title {
+  text-align: center;
+  margin: 24px 0px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.3)) padding-box text;
+  box-decoration-break: clone;
+  -webkit-text-fill-color: transparent;
+  color: unset;
+  padding-bottom: 0.13em;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+
+.explore-anim {
+	animation: 1000ms ease 0s 1 normal backwards running kiriko;
+  }
+
+.main-anim {
+	animation: 1200ms ease .05s 1 normal backwards running kiriko;
+  }
+
+@keyframes kiriko {
+    0% {
+		filter: blur(5px);
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100% {
+		filter: blur(0px);
+        opacity: 1;
+        transform: translateY(none);
+    }
+}
+
+.explore {
+	display: flex;
+	-moz-box-align: center;
+	align-items: center;
+	height: 28px;
+	padding: 0px 12px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: 100px;
+	color: var(--color-text-primary);
+	backdrop-filter: blur(12px);
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 28px;
+	white-space: nowrap;
+	transition-duration: 260ms;
+	transition-timing-function: ease;
+	transition-delay: 0s;
+	transition-property: background, width;
+	
+  }
+
+.explore:hover {
+		background: rgba(255, 255, 255, 0.2);
+	}
+
+/* -------------------------------------- */

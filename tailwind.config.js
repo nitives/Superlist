@@ -46,6 +46,14 @@ module.exports = {
         'n-dark-primary': '#3c2b9c',
         'n-dark-secondary': '#1d154c',
         'n-dark-accent': '#6d5bd2',
+        pandabuy: {
+          'theme': '#11ba66',
+          'secondary': '#66ba90',
+          'text': '#0b0b0b',
+          'background': '#ffffff',
+          'dark-background': '#0b0b0b',
+          'dark-text': '#fafafa'
+        },
       },
       fontFamily: {
         'abc': ['ABCDiatypeVariable'],
