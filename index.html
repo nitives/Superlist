@@ -109,27 +109,16 @@
         
 
         <!--Menu-->
-        <button id="MobileMenu" alt="Menu Button" class="lg:hidden md:hidden cursor-pointer"> 
-            <svg class="fill-n-dark-background dark:fill-n-background h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75 h16.5 M3.75 12h16.5m-16.5 5.25h16.5"/>
-            </svg>
+        <button id="MobileMenu" alt="Menu Button" class="lg:hidden md:hidden cursor-pointer z-20"> 
+            <div class="menu-icon">
+              <input class="menu-icon__cheeckbox" type="checkbox" />
+              <div>
+                <span class="bg-white"></span>
+                <span class="bg-white"></span>
+              </div>
+            </div>
         </button>
-        
-        <nav class="hidden mobile-menu bg-n-background dark:bg-n-dark-background">
-          <div class="scale-125 flex justify-center">
-            <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
-              <svg class="absolute left-[6px] fill-n-dark-background dark:fill-n-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-                <path class="btn-icon" fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
-              </svg>
 
-              <input id="searchInput" class="placeholder:text-gray-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-n-primary outline-none active:outline-n-secondary-400 rounded-lg dark:bg-n-container/5 bg-n-container focus:bg-n-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
-            
-              <svg class="relative right-[22px] fill-n-dark-background dark:fill-n-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm2.78-4.22a.75.75 0 0 1-1.06 0L8 9.06l-1.72 1.72a.75.75 0 1 1-1.06-1.06L6.94 8 5.22 6.28a.75.75 0 0 1 1.06-1.06L8 6.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L9.06 8l1.72 1.72a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
-              </svg>
-            </form>
-          </div>
-        </nav>
 
     </nav>
     <!--Title Mobile-->
