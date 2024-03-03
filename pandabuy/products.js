@@ -39,30 +39,34 @@ fetch('products.json')
 
 var debounceTimer;
 
-    function searchSites() {
-      clearTimeout(debounceTimer);
-    
-      debounceTimer = setTimeout(function() {
-        var searchQuery = document.getElementById('searchInput').value.toLowerCase();
-        var cards = document.querySelectorAll('#productFind:not(#searchInput)');
-    
-        cards.forEach(function(card) {
-          if (searchQuery === '') {
-            // If the search query is empty, display all cards
-            card.style.display = 'grid';
-          } else {
-            var dataTags = card.getAttribute('data-tags');
-            var tags = dataTags ? dataTags.toLowerCase().split(',') : [];
-    
-            var match = tags.some(function(tag) {
-              return tag.trim().includes(searchQuery);
-            });
-    
-            card.style.display = match ? 'grid' : 'none';
-          }
+function searchSites() {
+    clearTimeout(debounceTimer);
+  
+    debounceTimer = setTimeout(function() {
+      var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+      var cards = document.querySelectorAll('.product'); // Use class to select, not ID
+  
+      cards.forEach(function(card) {
+        var title = card.querySelector('h2').textContent.toLowerCase();
+        var description = card.querySelector('p').textContent.toLowerCase();
+        var dataTags = card.getAttribute('data-tags');
+        var tags = dataTags ? dataTags.toLowerCase().split(',') : [];
+  
+        // Check if the search query is in the title, description, or any of the tags
+        var match = title.includes(searchQuery) || description.includes(searchQuery) || tags.some(function(tag) {
+          return tag.trim().includes(searchQuery);
         });
-      }, 300);
-    }
+  
+        // Toggle the display based on the match
+        card.style.display = match ? 'grid' : 'none';
+      });
+    }, 300);
+  }
+  
+  // Add event listeners to both search inputs
+  document.querySelectorAll('.searchInput').forEach(input => {
+    input.addEventListener('input', searchSites);
+  });
     
     document.getElementById('searchInput').addEventListener('input', searchSites);
     window.addEventListener("keydown", (e) => {

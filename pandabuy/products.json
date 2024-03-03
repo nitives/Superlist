@@ -1,46 +1,71 @@
 [
-    {   
-        "id": 1,
-        "name": "Spider Hoodies",
-        "description": "Description for Product 1",
-        "image": "https://i.ebayimg.com/images/g/E7YAAOSwhpZk8vtv/s-l1200.webp",
-        "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
-        "tags": ["Gucci", "Fashion", "Clothing"]
+    {
+      "id": 1,
+      "name": "Spider Hoodies",
+      "description": "Description for Product 1",
+      "image": "https://i.ebayimg.com/images/g/E7YAAOSwhpZk8vtv/s-l1200.webp",
+      "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
+      "tags": [
+        "Spider Hoodies",
+        "Fashion",
+        "Clothing"
+      ]
     },
     {
-        "id": 2,
-        "name": "Yeezy Slides",
-        "description": "Description for Product 2",
-        "image": "product2.jpg",
-        "tags": ["Spider", "Hoodie", "Clothing"]
+      "id": 2,
+      "name": "Yeezy Slides",
+      "description": "Description for Product 2",
+      "image": "product2.jpg",
+      "tags": [
+        "Spider",
+        "Hoodie",
+        "Clothing"
+      ]
     },
     {
-        "id": 3,
-        "name": "Jordan 4 Black Cats",
-        "description": "Description for Product 3",
-        "image": "product2.jpg",
-        "tags": ["Jordan 4 Black Cats", "Shoes", "Jordan", "a"]
-    },
-    {   
-        "id": 4,
-        "name": "Spider Hoodies",
-        "description": "Description for Product 4",
-        "image": "product1.jpg",
-        "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
-        "tags": ["Gucci", "Fashion", "Clothing"]
+      "id": 3,
+      "name": "Jordan 4 Black Cats",
+      "description": "Description for Product 3",
+      "image": "product2.jpg",
+      "tags": [
+        "Jordan 4 Black Cats",
+        "Shoes",
+        "Jordan",
+        "a"
+      ]
     },
     {
-        "id": 5,
-        "name": "Yeezy Slides",
-        "description": "Description for Product 5",
-        "image": "product2.jpg",
-        "tags": ["Spider", "Hoodie", "Clothing"]
+      "id": 4,
+      "name": "Spider Hoodies",
+      "description": "Description for Product 4",
+      "image": "product1.jpg",
+      "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
+      "tags": [
+        "Gucci",
+        "Fashion",
+        "Clothing"
+      ]
     },
     {
-        "id": 6,
-        "name": "Jordan 4 Black Cats",
-        "description": "Description for Product 6",
-        "image": "product2.jpg",
-        "tags": ["Shoes", "Jordan", "Blck"]
+      "id": 5,
+      "name": "Yeezy Slides",
+      "description": "Description for Product 5",
+      "image": "product2.jpg",
+      "tags": [
+        "Spider",
+        "Hoodie",
+        "Clothing"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Jordan 4 Black Cats",
+      "description": "Description for Product 6",
+      "image": "product2.jpg",
+      "tags": [
+        "Shoes",
+        "Jordan",
+        "Blck"
+      ]
     }
-]
+  ]
