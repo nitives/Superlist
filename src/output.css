@@ -2171,6 +2171,11 @@ input[type="search"]::-webkit-search-results-decoration {
   .download-shadow {
     box-shadow: 0px 4px 4px #b3adcf, 0px -3px 4px #b3adcf inset;
   }
+
+  .btn-shadow {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(hsla(0, 0%, 75%, 0.05), hsla(0, 0%, 0%, 0.01));
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2372,7 +2377,7 @@ li::marker {
 
 .product {
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.025);
+  background-color: rgba(0, 0, 0, 0.03);
   border-radius: calc(var(--product-rad) + 20px);
   aspect-ratio: 1 / 1;
   box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.05);
@@ -2385,6 +2390,9 @@ li::marker {
   font-weight: 600;
   font-size: 20px;
   padding-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .product p {
@@ -2398,8 +2406,6 @@ li::marker {
 .product img {
   margin: auto;
   align-items: center;
-  width: 200px;
-  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1 / 1;

@@ -19,7 +19,7 @@
       "image": "https://142344524.cdn6.editmysite.com/uploads/1/4/2/3/142344524/s159676499858804371_p969_i4_w1080.jpeg",
       "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
       "tags": [
-        "Spider",
+        "Yeezy",
         "Hoodie",
         "Shoes"
       ]
@@ -38,25 +38,27 @@
     },
     {
       "id": 4,
-      "name": "Spider Hoodies",
-      "description": "Description for Product 4",
-      "image": "product1.jpg",
-      "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
+      "name": "Sp5der Hoodies and Sweats",
+      "description": "Shop with Sp5der Merch",
+      "image": "https://i.ebayimg.com/images/g/E7YAAOSwhpZk8vtv/s-l1200.webp",
+      "link": "https://www.pandabuy.com/shopdetail?t=taobao&id=shop2153207958&spi=111907145&sli=2153207958",
       "tags": [
-        "Gucci",
-        "Fashion",
-        "Clothing"
+        "Hoodies",
+        "Sweats",
+        "Clothing",
+        "Spider"
       ]
     },
     {
       "id": 5,
       "name": "Yeezy Slides",
-      "description": "Description for Product 5",
-      "image": "product2.jpg",
+      "description": "Slides",
+      "image": "https://142344524.cdn6.editmysite.com/uploads/1/4/2/3/142344524/s159676499858804371_p969_i4_w1080.jpeg",
+      "link": "https://www.pandabuy.com/product?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D4525209885&spider_token=4572",
       "tags": [
-        "Spider",
+        "Yeezy",
         "Hoodie",
-        "Clothing"
+        "Shoes"
       ]
     },
     {
@@ -67,7 +69,7 @@
       "tags": [
         "Shoes",
         "Jordan",
-        "Blck"
+        "Black"
       ]
     }
   ]

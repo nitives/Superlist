@@ -39,40 +39,34 @@ fetch('products.json')
 
 var debounceTimer;
 
-function searchSites() {
-    clearTimeout(debounceTimer);
-  
-    debounceTimer = setTimeout(function() {
-      var searchQuery = document.getElementById('searchInput').value.toLowerCase();
-      var cards = document.querySelectorAll('.product'); // Use class to select, not ID
-  
-      cards.forEach(function(card) {
-        var title = card.querySelector('h2').textContent.toLowerCase();
-        var description = card.querySelector('p').textContent.toLowerCase();
-        var dataTags = card.getAttribute('data-tags');
-        var tags = dataTags ? dataTags.toLowerCase().split(',') : [];
-  
-        // Check if the search query is in the title, description, or any of the tags
-        var match = title.includes(searchQuery) || description.includes(searchQuery) || tags.some(function(tag) {
-          return tag.trim().includes(searchQuery);
-        });
-  
-        // Toggle the display based on the match
-        card.style.display = match ? 'grid' : 'none';
-      });
-    }, 300);
+document.addEventListener('input', function(e) {
+  if (e.target.id === 'searchInput' || e.target.id === 'searchInput2') {
+    searchSites(e);
   }
-  
-  // Add event listeners to both search inputs
-  document.querySelectorAll('.searchInput').forEach(input => {
-    input.addEventListener('input', searchSites);
-  });
-    
-    document.getElementById('searchInput').addEventListener('input', searchSites);
-    window.addEventListener("keydown", (e) => {
-      if (e.code === 'F3' || ((e.ctrlKey || e.metaKey) && e.code === 'KeyK')) { 
-        e.preventDefault();
-        const searchInput = document.querySelector('#searchInput')
-        searchInput.focus()
-      }
-    })
+});
+
+// Adjust the searchSites function to receive the event parameter
+function searchSites(e) {
+  // Use e.target to get the current input element
+  clearTimeout(debounceTimer);
+
+  debounceTimer = setTimeout(function() {
+    var searchQuery = e.target.value.toLowerCase();
+    var cards = document.querySelectorAll('.product');
+
+    cards.forEach(function(card) {
+      var title = card.querySelector('h2').textContent.toLowerCase();
+      var description = card.querySelector('p').textContent.toLowerCase();
+      var dataTags = card.getAttribute('data-tags');
+      var tags = dataTags ? dataTags.toLowerCase().split(',') : [];
+
+      // Check if the search query is in the title, description, or any of the tags
+      var match = title.includes(searchQuery) || description.includes(searchQuery) || tags.some(function(tag) {
+        return tag.trim().includes(searchQuery);
+      });
+
+      // Toggle the display based on the match
+      card.style.display = match ? 'block' : 'none';
+    });
+  }, 300);
+}

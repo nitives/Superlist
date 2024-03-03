@@ -147,6 +147,12 @@
   </header>
     <main>
 
+        <nav class="md:hidden w-screen px-4">
+            <form onsubmit="event.preventDefault(); fetchProductsResults();" action="" class="flex relative items-center">
+                <input id="searchInput2" class="searchInput placeholder:text-zinc-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-2 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-pandabuy-theme outline-none active:outline-zinc-400 rounded-lg dark:bg-zinc-300/5 bg-zinc-300 focus:bg-pandabuy-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
+              </form>
+          </nav>
+
     <script src="products.js"></script>
     <div class="product-grid grid md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6 product-item mx-auto w-full px-10" id="productGrid"></div>
 
