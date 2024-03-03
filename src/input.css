@@ -454,9 +454,14 @@ li::marker {
 
 .product {
 	padding: 20px;
-	background-color: rgba(255, 255, 255, 0.025);
+	background-color: rgba(0, 0, 0, 0.025);
 	border-radius: calc(var(--product-rad) + 20px);
 	aspect-ratio: 1 / 1;
+	box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    
 }
 
 .product h2 {
@@ -467,7 +472,10 @@ li::marker {
 
 .product p {
 	padding-top: 10px;
-	opacity: 65%
+	opacity: 65%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .product img {
@@ -478,7 +486,7 @@ li::marker {
 	object-fit: cover;
 	aspect-ratio: 1 / 1;
 	border-radius: var(--product-rad);
-	box-shadow: 0px 5px 10px rgba(1, 1, 1, 0.25);
+	box-shadow: 0px 5px 20px rgba(1, 1, 1, 0.05);
 }
 
 :root {
@@ -490,6 +498,13 @@ li::marker {
     :root {
         --image-color: rgba(255, 255, 255, 0.1); /* Change color for dark mode */
     }
+	.product {
+		background-color: rgba(255, 255, 255, 0.025);
+		box-shadow: 0px 5px 10px rgba(1, 1, 1, 0.05);
+    }
+	.product img {
+		box-shadow: 0px 5px 10px rgba(1, 1, 1, 0.25);
+	}
 }
 
 .product img {
