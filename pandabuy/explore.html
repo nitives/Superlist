@@ -108,10 +108,14 @@
         
 
         <!--Menu-->
-        <button id="MobileMenu" alt="Menu Button" class="lg:hidden md:hidden cursor-pointer"> 
-            <svg class="fill-pandabuy-dark-background dark:fill-pandabuy-background h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75 h16.5 M3.75 12h16.5m-16.5 5.25h16.5"/>
-            </svg>
+        <button id="MobileMenu" alt="Menu Button" class="lg:hidden md:hidden cursor-pointer z-20"> 
+            <div class="menu-icon">
+              <input class="menu-icon__cheeckbox" type="checkbox" />
+              <div>
+                <span class="bg-white"></span>
+                <span class="bg-white"></span>
+              </div>
+            </div>
         </button>
         
         <nav class="hidden mobile-menu bg-pandabuy-background dark:bg-pandabuy-dark-background">
