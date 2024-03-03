@@ -44,15 +44,15 @@
     <link rel="stylesheet" href="/src/input.css">
     <link rel="stylesheet" href="/src/output.css">
     <link href="">
-    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="../font.css">
     <link rel="icon" href="/assets/logo/favicon-black.ico" type="image/ico">
     <link rel="apple-touch-icon" href="/assets/logo/apple_superlist.png">
     <link rel=”mask-icon” href="/assets/logo/svg/superlist.svg" color="#000000">
     <link href="og/pattern.min.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-    <script src="modal.js" defer></script>
-    <script src="loadjson.js"></script>
-    <link rel="manifest" href="manifest.json"/>
+    <script src="../script-alt.js" defer></script>
+    <script src="../modal.js" defer></script>
+    <script src="../loadjson.js"></script>
+    <link rel="manifest" href="../manifest.json"/>
     
 </head>
 <body class="bg-pandabuy-background dark:bg-pandabuy-dark-background text-pandabuy-text dark:text-pandabuy-dark-text antialiased flex flex-col p-2">
@@ -76,7 +76,7 @@
         <!--Search Bar & Socials-->
         <div class="hidden md:flex gap-3 items-center">
             <div class="inline-flex items-center">
-              <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
+              <form onsubmit="event.preventDefault(); fetchProductsResults();" action="" class="flex relative items-center">
                 <input id="searchInput" class="searchInput focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm placeholder:text-zinc-500 border-2 border-zinc-100/0 hover:border-zinc-100/20 outline-2 focus:outline-pandabuy-theme outline-none active:outline-pandabuy-secondary rounded-lg dark:bg-zinc-300/5 bg-zinc-300 focus:bg-pandabuy-dark-background/10" type="search" placeholder="Search..." value="" data-focus-visible-added="">
               <kbd class="kbd-btn absolute text-center dark:bg-pandabuy-dark-background bg-pandabuy-background my-auto select-none h-5 rounded pt-[2px] px-1.5 font-mono text-[10px] font-medium text-zinc-500 border border-n-text/[.2] dark:border-zinc-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none">
                 <kbd class="keyboard-shortcut"></kbd><kbd class="keyboard-shortcut"></kbd> K
@@ -116,12 +116,12 @@
         
         <nav class="hidden mobile-menu bg-pandabuy-background dark:bg-pandabuy-dark-background">
           <div class="scale-125 flex justify-center">
-            <form onsubmit="event.preventDefault(); fetchMovieResults();" action="" class="flex relative items-center">
+            <form onsubmit="event.preventDefault(); fetchProductsesults();" action="" class="flex relative items-center">
               <svg class="absolute left-[6px] fill-pandabuy-dark-background dark:fill-pandabuy-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
                 <path class="btn-icon" fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
               </svg>
 
-              <input id="searchInput" class="placeholder:text-zinc-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-pandabuy-theme outline-none active:outline-zinc-400 rounded-lg dark:bg-zinc-300/5 bg-zinc-300 focus:bg-pandabuy-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
+              <input id="searchInputa" class="placeholder:text-zinc-500/30 placeholder: btn-shadow pl-5 focus-visible block w-full px-3 py-1 transition-colors text-base leading-tight md:text-sm outline-2 focus:outline-pandabuy-theme outline-none active:outline-zinc-400 rounded-lg dark:bg-zinc-300/5 bg-zinc-300 focus:bg-pandabuy-dark-background/10" placeholder=" Search..." type="search" value="" data-focus-visible-added="">
             
               <svg class="relative right-[22px] fill-pandabuy-dark-background dark:fill-pandabuy-background w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
                 <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm2.78-4.22a.75.75 0 0 1-1.06 0L8 9.06l-1.72 1.72a.75.75 0 1 1-1.06-1.06L6.94 8 5.22 6.28a.75.75 0 0 1 1.06-1.06L8 6.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L9.06 8l1.72 1.72a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
@@ -130,46 +130,11 @@
           </div>
         </nav>
     </nav>
-
-    <div class="w-fit h-2 mx-auto pb-7 lg:pb-0">
-      <a class="explore-anim explore hover:" rel="noopener" href="pandabuy/explore.html">
-        <p class="text-current">Explore</p>
-        <svg class=""
-          style="margin-left:4px;margin-right:-6px;--icon-color:currentColor" width="14" height="14" viewBox="0 0 16 16"
-          fill="currentColor" role="img" focusable="false" aria-hidden="true">
-          <path
-            d="M5.46967 11.4697C5.17678 11.7626 5.17678 12.2374 5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L10.5303 8.53033C10.8207 8.23999 10.8236 7.77014 10.5368 7.47624L6.63419 3.47624C6.34492 3.17976 5.87009 3.17391 5.57361 3.46318C5.27713 3.75244 5.27128 4.22728 5.56054 4.52376L8.94583 7.99351L5.46967 11.4697Z">
-          </path>
-        </svg>
-      </a>
-    </div>
-
-    <!--Title Mobile-->
-    <div class="flex lg:hidden items-center justify-center">
-      <a class="pl-2 items-center gap-[1.7] flex">
-          <span class="main-anim font-[500] text-5xl text-center max-w-4xl md:text-6xl lg:text-7xl dark:text-pandabuy-dark-text/50 text-pandabuy-text"><span class="text-2xl dark:text-pandabuy-dark-text/25 text-pandabuy-text">Superlist&apos;s</span><br><span class="hero-title">Pandabuy</span><br><span class="hero-title">Index</span></span>
-      </a>
-    </div>
-    <!--Title Desktop-->
-    <div class="flex items-center justify-center">
-      <a class="pl-2 items-center gap-[1.7] lg:flex hidden">
-          <span class="main-anim font-[500] text-7xl text-center max-w-4xl md:text-6xl lg:text-7xl dark:text-pandabuy-dark-text/50 text-pandabuy-text"><span class="text-2xl dark:text-pandabuy-dark-text/25 text-pandabuy-text">Superlist&apos;s</span><br><span class="hero-title">Pandabuy</span><br><span class="hero-title">Index</span></span>
-      </a>
-    </div>
-
-    <div class="-z-10"> 
-          <div aria-hidden="true"
-            class="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            style="position: absolute; inset: 0px; top: 145px; z-index: -10; transform: translateZ(0); overflow: hidden;">
-            <div
-              class="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] opacity-30 sm:left-[calc(50%-36rem)] sm:w-[72.1875rem]"
-              style="opacity: 0.05; background-image: linear-gradient(to top right, #0000FF, #0077ff, #00FF00, #FFFF00, #FF0000, #00ffff, #0099ff); position: relative; left: calc(60% - 13rem); width: 36.125rem; transform: translateX(-50%) rotate(30deg); clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-            </div>
-          </div>
-    </div>
-    
   </header>
-  <main>
+    <main>
+
+    <script src="products.js"></script>
+    <div class="product-grid grid md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6 product-item mx-auto w-full px-10" id="productGrid"></div>
 
 
 
@@ -185,10 +150,7 @@
 
 
 
-
-
-
-  </main>
+    </main>
 
   <footer class="m-4 b-t rounded-3xl border-[2px] border-zinc-300 dark:border-zinc-300/5 bg-pandabuy-background dark:bg-pandabuy-dark-background">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
