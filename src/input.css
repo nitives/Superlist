@@ -202,7 +202,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
 .kbd-btn {
-	left: 78%;
+	left: 77%;
 }
 
 /* @media (min-width: 768px) {
@@ -497,7 +497,7 @@ li::marker {
 
 :root {
     --image-color: rgba(0, 0, 0, 0.1); /* Default color */
-	--product-rad: 15px;
+	--product-rad: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
